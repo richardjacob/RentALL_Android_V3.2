@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    android:background="@android:color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="locale">
+
+    <ImageView
+        android:id="@+id/iv_navigateup"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:paddingStart="@dimen/toolbar_padding"
+        android:paddingEnd="@dimen/toolbar_padding"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_toolbar_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/edit_profile"
+        android:layout_toEndOf="@id/iv_navigateup"
+        android:layout_toStartOf="@id/iv_camera_toolbar"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:textDirection="locale"
+        />
+
+    <ImageView
+        android:id="@+id/iv_camera_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="@dimen/toolbar_padding"
+        android:paddingEnd="@dimen/toolbar_padding"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_photo_camera_grey_24dp"
+        tools:ignore="ContentDescription" />
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/iv_navigateup">
+
+        <TextView
+            android:id="@+id/tv_rightside"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/login_text"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_h1"
+            android:paddingStart="@dimen/toolbar_padding"
+            android:paddingEnd="@dimen/toolbar_padding"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentEnd="true"
+            android:textDirection="locale"/>
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

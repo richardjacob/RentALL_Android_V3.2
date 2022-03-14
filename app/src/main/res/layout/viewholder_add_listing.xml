@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="url"
+            type="String"/>
+        <variable
+            name="isLoading"
+            type="Boolean"/>
+        <variable
+            name="isRetry"
+            type="Boolean"/>
+        <variable
+            name="onSelected"
+            type="Boolean"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="onRetryClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="onClickq"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="deleteClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:layoutDirection="locale">
+
+    <ImageView
+        android:id="@+id/tv_list_photos"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        listingImage="@{url}"
+        isLoadingStatus="@{isLoading}"
+        isRetry = "@{isRetry}"
+        android:adjustViewBounds="true"
+        android:onClick="@{onClick}"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_close_white_24dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="@{deleteClick}"
+        isRetryStatus="@{isRetry}"
+        isLoadingStatus="@{isLoading}"
+        android:background="@drawable/curve_semi_trans_close"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_scale="1.0"
+        android:visibility="@{isLoading? View.VISIBLE : View.GONE}"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_autorenew_red_24dp"
+        android:layout_centerInParent="true"
+        android:onClick="@{onRetryClick}"
+        android:visibility="@{isRetry? View.VISIBLE : View.GONE}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/cover"
+        android:textColor="@color/white"
+        android:background="@{onSelected? @drawable/curve_button_green : @drawable/curve_semi_trans}"
+        isRetryStatus="@{isRetry}"
+        isLoadingStatus="@{isLoading}"
+        android:textSize="14sp"
+        android:button="@android:color/transparent"
+        android:onClick="@{onClickq}"
+        android:duplicateParentState="true"
+        android:clickable="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textDirection="locale"/>
+
+</RelativeLayout>
+
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.rentall.radicalstart.ui.auth.AuthViewModel.Screen"/>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.saved.createlist.CreateListViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tv_create">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/abl_saved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetEnd="0dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_clear_black_24dp"
+                            tools:ignore="ContentDescription" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rv_create_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:background="@color/white">
+            </com.airbnb.epoxy.EpoxyRecyclerView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:text="@string/create"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curve_button_blue_1"
+            android:drawableEnd="@drawable/ic_chevron_right_white_24dp"
+            android:onClick="@{() -> viewModel.validateData()}"
+            app:first="@{viewModel.title}"
+            app:last="@{viewModel.groupPrivacy}"
+            app:screen="@{Screen.CREATELIST}"
+            android:textDirection="locale"/>
+
+        <FrameLayout
+            android:id="@+id/fl_createlist_loading_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            goneUnless="@{viewModel.isLoading}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lt_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                app:lottie_rawRes="@raw/loading"
+                android:background="@drawable/lottie_background"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="guestCount"
+            type="String" />
+        <variable
+            name="bedCount"
+            type="String" />
+        <variable
+            name="bedroomCount"
+            type="String" />
+        <variable
+            name="bathCount"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:baselineAligned="false"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layoutDirection="locale">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@{guestCount}"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/text_size_h1_5"
+                android:drawableStart="@drawable/ic_supervisor_account_black_24dp"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@{bedCount }"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/text_size_h1_5"
+                android:drawableStart="@drawable/ic_local_hotel_black_24dp"
+                android:textDirection="locale"/>
+            <!--                 android:visibility="@{Integer.parseInt(bedCount) > 0 ? View.VISIBLE : View.INVISIBLE }"
+-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@{bedroomCount}"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:textSize="@dimen/text_size_h1_5"
+                android:drawableStart="@drawable/ic_door_black"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@{bathCount}"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/text_size_h1_5"
+                android:drawableStart="@drawable/ic_bathtub_black"
+                android:textDirection="locale"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
+

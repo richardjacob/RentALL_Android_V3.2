@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <import type="android.text.InputType"/>
+        <variable
+            name="hint"
+            type="String"/>
+        <variable
+            name="etHeight"
+            type="Boolean"/>
+        <variable
+            name="inputType"
+            type="Boolean"/>
+        <variable
+            name="maxLength"
+            type="Integer"/>
+        <variable
+            name="onNoticeClick"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:onClick="@{onNoticeClick}"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:id="@+id/et_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:textSize="18sp"
+            android:singleLine="false"
+            android:focusable="false"
+            android:maxLength='@{maxLength}'
+            android:textColor="@color/black"
+            android:text="@{hint}"
+            android:textDirection="locale"
+            />
+
+    </RelativeLayout>
+
+</layout>

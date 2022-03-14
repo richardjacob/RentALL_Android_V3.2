@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="locale">
+
+        <LinearLayout
+            android:id="@+id/tab_up_past"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_upcoming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/upcoming"
+                android:layout_weight="1.375"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:background="@drawable/curve_button_blue_map"
+                android:textDirection="locale"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.25"/>
+            <TextView
+                android:id="@+id/tv_past"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/past"
+                android:layout_weight="1.375"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:background="@drawable/curve_button_gray_map"
+                android:textDirection="locale"
+                />
+
+        </LinearLayout>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rv_about_me_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/tab_up_past"
+            android:layout_marginTop="15dp">
+        </com.airbnb.epoxy.EpoxyRecyclerView>
+
+        <FrameLayout
+            android:id="@+id/frame_review_past"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/tab_up_past"
+            android:layout_marginTop="15dp"
+            />
+
+    </RelativeLayout>
+</layout>

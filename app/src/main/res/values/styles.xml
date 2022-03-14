@@ -1,0 +1,332 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>-->
+        <item name="android:fontFamily">@font/linetocircular</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!--<item name="android:alertDialogTheme">@style/AlertDialogCustom</item>-->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16dp</item>
+        <item name="android:singleLine">true</item>
+       <item name="android:fontFamily">@font/lineto_circular_bold</item>
+    </style>
+
+    <style name="splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#AAAAAA</item>
+<!--        <item name="android:windowDisablePreview">true</item>-->
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="AuthTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="HomeTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="TooltipTextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:width">10dp</item>
+    </style>
+
+    <style name="TextStyleBold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyleNormal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="DetailTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@color/transparent</item>-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="InDetailTheme" parent="AppTheme">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:attr/actionBarSize</item>
+    </style>
+
+    <style name="ScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowSoftInputMode">adjustPan|stateVisible</item>
+        <item name="android:fadeScrollbars">true</item>
+    </style>
+
+    <!--Auth Screen ..Start-->
+
+    <style name="AuthScreenTopLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/layout_padding</item>
+    </style>
+
+    <style name="AuthScreenTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AuthScreenInputPlaceholder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_h1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AuthScreenEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:backgroundTint">@color/edittext_line</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:colorControlActivated">@color/edittext_line</item>
+        <item name="android:colorControlHighlight">@color/edittext_line</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_white</item>
+    </style>
+
+    <style name="AuthScreenLottieLayout">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="AuthScreenSignupButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/curve_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/static_gradient_color</item>
+        <item name="android:textSize">@dimen/text_size_h2</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:drawablePadding">-26dp</item>
+        <item name="android:foreground">@drawable/ripple_effect</item>
+    </style>
+
+    <style name="BirthDayEditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_h4</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+
+    <style name="AuthScreenUserInfoTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_h1</item>
+    </style>
+
+    <!--<style name="AlertDialogCustom" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorPrimary">#00397F</item> Tip: Try to refresh the layout.
+        <item name="android:colorAccent">#0AAEEF</item>
+    </style>-->
+
+    <style name="CustomDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/linetocircular_bold</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <!--Auth Screen ..End-->
+
+    <!--Edit Profile Sub Screen ..Start-->
+
+    <style name="EditProfileScreenEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/curve_button_editprofile</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_h4</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">17dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_black</item>
+    </style>
+
+    <style name="EditProfileScreenPlaceHolderTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_h2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!--Edit Profile Sub Screen ..End-->
+
+    <style name="MySwitch" parent="@style/Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorAccent">@color/status_bar_color</item>
+    </style>
+
+    <style name="BaseText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="BaseText1" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey_font</item>
+        <item name="colorAccent">@color/grey_font</item>
+        <item name="colorControlNormal">@color/text_color</item>
+        <item name="colorControlActivated">@color/text_color</item>
+        <item name="colorControlHighlight">@color/text_color</item>
+    </style>
+
+   <!-- <style name="EntryActivity" >
+        <item name="android:windowBackground">@drawable/logo_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>-->
+
+    <style name="OptionTheme">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">#55000000</item>
+    </style>
+
+
+
+    <style name="TransparentBase" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+     <style name="Canonical" />
+    <style name="Canonical.Button" parent="@style/Canonical">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48.0dip</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Canonical.Button.Raised" parent="@style/Canonical.Button">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@drawable/logout_button_text_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/logout_button_selector</item>
+        <item name="android:paddingLeft">@dimen/gutter_padding</item>
+        <item name="android:paddingRight">@dimen/gutter_padding</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#F5F6F5</item>
+    </style>
+
+    <style name="PopupMenu123" parent="@style/Theme.AppCompat.Light">
+        <item name="android:overlapAnchor">true</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+        <item name="android:dropDownHorizontalOffset">50dp</item>
+        <!--<item name="android:popupBackground">#000000</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:layout_height">match_parent</item>-->
+        <!--<item name="android:layout_margin">0dp</item>-->
+        <!--<item name="android:layout_width">2dp</item>-->
+        <!--<item name="android:maxWidth">20dp</item>-->
+    </style>
+
+    <style name="BecomeHostText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="BecomeHostEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:inputType">textCapSentences|textMultiLine</item>
+        <item name="android:backgroundTint">#d9d9d9</item>
+        <item name="android:colorControlActivated">#d9d9d9</item>
+        <item name="android:colorControlHighlight">#d9d9d9</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_black</item>
+    </style>
+
+    <style name="BecomeHostDescEdit">
+        <item name="android:backgroundTint">#d9d9d9</item>
+        <item name="android:colorControlActivated">#d9d9d9</item>
+        <item name="android:colorControlHighlight">#d9d9d9</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_black</item>
+    </style>
+
+
+    <array name="bg_color">
+        <item name="bg_screen1">#f64c73</item>
+<item name="bg_screen2">#20d2bb</item>
+<item name="bg_screen3">#3395ff</item>
+<item name="bg_screen4">#c873f4</item>
+    </array>
+
+
+</resources>

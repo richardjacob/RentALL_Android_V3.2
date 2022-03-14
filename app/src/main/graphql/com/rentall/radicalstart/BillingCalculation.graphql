@@ -1,0 +1,125 @@
+#Billing Summary
+query getBillingCalculation($listId: Int!, $startDate: String!, $endDate: String!, $guests: Int!, $convertCurrency: String!) {
+  getBillingCalculation(listId: $listId, startDate: $startDate, endDate: $endDate, guests: $guests, convertCurrency: $convertCurrency) {
+    result {
+      checkIn
+      checkOut
+      nights
+      basePrice
+      cleaningPrice
+      guests
+      currency
+      guestServiceFeePercentage
+      hostServiceFeePercentage
+      weeklyDiscountPercentage
+      monthlyDiscountPercentage
+      guestServiceFee
+      hostServiceFee
+      discountLabel
+      discount
+      subtotal
+      total
+      averagePrice
+      priceForDays
+      specialPricing{
+      blockedDates
+      isSpecialPrice
+      }
+      isSpecialPriceAssigned
+    }
+    status
+    errorMessage
+  }
+}
+
+# Reservation Details
+query getReservation($reservationId: Int!,$convertCurrency: String) {
+getReservation(reservationId: $reservationId,convertCurrency: $convertCurrency) {
+ status
+ errorMessage
+ results {
+   id
+   nights
+   listId
+   hostId
+   guestId
+   checkIn
+   checkOut
+   guests
+   message
+   basePrice
+   cleaningPrice
+   currency
+   discount
+   checkInStart
+   checkInEnd
+   discountType
+   isSpecialPriceAverage
+   guestServiceFee
+   hostServiceFee
+   total
+   totalWithGuestServiceFee
+   confirmationCode
+   paymentState
+   payoutId
+   paymentMethodId
+   reservationState
+   createdAt
+   updatedAt
+   listData {
+   id
+   title
+   street
+   city
+   state
+   country
+   zipcode
+   reviewsCount
+   reviewsStarRating
+   roomType
+   bookingType
+   wishListStatus
+   listPhotoName
+   listPhotos {
+      id
+      name
+   }
+   listingData {
+     checkInStart
+     checkInEnd
+   }
+   settingsData {
+     id
+     listsettings {
+       id
+       itemName
+     }
+   }
+ }
+   messageData {
+     id
+   }
+   hostData {
+     userId
+     profileId
+     displayName
+     picture
+   }
+   guestData {
+    userId
+    profileId
+    displayName
+    picture
+  }
+ }
+ convertedBasePrice
+convertedHostServiceFee
+convertedGuestServicefee
+convertedIsSpecialAverage
+convertedTotalNightsAmount
+convertTotalWithGuestServiceFee
+convertedTotalWithHostServiceFee
+convertedCleaningPrice
+convertedDiscount
+}
+}

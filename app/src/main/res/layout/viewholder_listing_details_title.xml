@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="url"
+            type="String" />
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="type"
+            type="String" />
+        <variable
+            name="location"
+            type="String" />
+        <variable
+            name="owner"
+            type="String" />
+        <variable
+            name="bookingType"
+            type="String" />
+        <variable
+            name="onProfileClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{type}"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textDirection="locale"
+                android:textSize="12sp"
+                android:textColor="@color/room_type" />
+
+            <ImageView
+                android:id="@+id/iv_item_listing_instant_image"
+                instantBook="@{bookingType}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_type"
+                android:layout_alignBottom="@id/tv_type"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{title}"
+            android:textStyle="bold"
+            android:textDirection="locale"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_title"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/iv_listing_hosting_image">
+
+                <TextView
+                    android:id="@+id/tv_listing_hosting_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{location}"
+                    android:textSize="@dimen/text_size_h1_5"
+                    android:textDirection="locale"
+                    android:textColor="@color/text_color"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_listing_hosting_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{owner}"
+                    android:textSize="@dimen/text_size_h1_5"
+                    android:textDirection="locale"
+                    android:textColor="@color/text_color"
+                    android:layout_below="@id/tv_listing_hosting_location"
+                    />
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_listing_hosting_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                img="@{url}"
+                android:onClick="@{onProfileClick}"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

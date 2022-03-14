@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.host.payout.editpayout.PayoutViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg_3"
+        android:layoutDirection="locale">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_24dp"
+            android:padding="20dp"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/et_search_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_for_country_region"
+            android:textColorHint="#8EFFFFFF"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="20dp"
+            android:backgroundTint="@android:color/transparent"
+            android:onTextChanged="@{(text, start, before, count) -> viewModel.onSearchTextChanged(text)}"
+            android:inputType="textCapWords"
+            tools:ignore="Autofill,LabelFor"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"/>
+
+        <View
+            android:id="@+id/view_eight_divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="visible"
+            android:alpha="0.5"
+            android:background="#d9d9d9" />
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rl_country"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.airbnb.epoxy.EpoxyRecyclerView>
+    </LinearLayout>
+</layout>

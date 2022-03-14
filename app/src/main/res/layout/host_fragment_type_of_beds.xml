@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:splitMotionEvents="false"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/toolbar"
+            style="@style/Toolbar"/>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rv_step_one"
+            android:layout_margin="5dp"
+            android:paddingBottom="70dp"
+            android:layout_below="@id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.airbnb.epoxy.EpoxyRecyclerView>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"
+            android:text="@string/next"
+            android:background="@drawable/curve_button_green"
+            android:fontFamily="@font/linetocircular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:splitMotionEvents="false"
+            android:drawableEnd="@drawable/ic_next_arrow"
+            style="@style/AuthScreenLottieLayout"
+            android:textDirection="locale"
+            />
+
+    </RelativeLayout>
+
+</layout>

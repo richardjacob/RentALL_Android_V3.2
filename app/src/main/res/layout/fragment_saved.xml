@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:layoutDirection="locale">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+          <!--  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srl_saved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.airbnb.epoxy.EpoxyRecyclerView
+                    android:id="@+id/rv_saved"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+                </com.airbnb.epoxy.EpoxyRecyclerView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rv_saved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+            </com.airbnb.epoxy.EpoxyRecyclerView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lt_loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/animation"
+            app:lottie_autoPlay="true"
+            android:layout_centerInParent="true"
+            app:lottie_loop="true"
+            app:lottie_scale="0.5"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/rlSaveNoListPlaceholder"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/when_you_see_something_you_like_tap_on_the_heart_to_save_it_if_you_re_planning_a_trip_with_others_invite_them_so_they_can_save_and_vote_on_their_favorites"
+                android:textSize="18sp"
+                android:textColor="@color/text_color"
+                android:textDirection="locale"
+                />
+
+            <TextView
+                android:id="@+id/tv_start_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_exploring"
+                android:textSize="@dimen/text_size_h2"
+                android:textColor="@color/status_bar_color"
+                android:layout_marginTop="40dp"
+                android:textDirection="locale"
+                />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_saved_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</layout>

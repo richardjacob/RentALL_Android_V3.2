@@ -1,0 +1,78 @@
+query SearchListing (
+  $personCapacity: Int,
+  $currentPage: Int,
+  $dates: String,
+  $lat: Float,
+  $lng: Float,
+  $amenities: [Int],
+  $beds: Int,
+  $bedrooms: Int,
+  $bathrooms: Int,
+  $roomType: [Int],
+  $spaces: [Int],
+  $houseRules: [Int],
+  $priceRange: [Int],
+  $geoType: String,
+  $geography: String,
+  $bookingType: String,
+  $address: String,
+  $currency: String
+) {
+    SearchListing (
+        personCapacity: $personCapacity,
+        currentPage: $currentPage,
+        dates: $dates,
+        lat: $lat,
+        lng: $lng,
+        amenities: $amenities,
+        beds: $beds,
+        bedrooms: $bedrooms,
+        bathrooms: $bathrooms,
+        roomType: $roomType,
+        spaces: $spaces,
+        houseRules: $houseRules,
+        priceRange: $priceRange,
+        geoType: $geoType,
+        geography: $geography,
+        bookingType: $bookingType,
+        address: $address,
+        currency: $currency
+    ) {
+        count
+        results {
+          id
+          title
+          personCapacity
+          lat
+          lng
+          beds
+          bookingType
+          coverPhoto
+          roomType
+          reviewsCount
+          reviewsStarRating
+          listPhotoName
+          listPhotos {
+            id
+            name
+            type
+            status
+          }
+          listingData {
+            basePrice
+            currency
+          }
+          settingsData {
+            listsettings {
+              id
+              itemName
+            }
+          }
+          wishListStatus
+          wishListGroupCount
+          isListOwner
+        }
+        status
+        errorMessage
+    }
+}

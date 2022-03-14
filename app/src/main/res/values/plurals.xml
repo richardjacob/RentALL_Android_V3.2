@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <plurals name="bed_count">
+        <item quantity="other"> beds</item>
+        <item quantity="one"> bed</item>
+    </plurals>
+    <plurals name="bedroom_count">
+        <item quantity="other"> bedrooms</item>
+        <item quantity="one"> bedroom</item>
+    </plurals>
+    <plurals name="guest_count">
+        <item quantity="other"> guests</item>
+        <item quantity="one"> guest</item>
+    </plurals>
+    <plurals name="bath_count">
+        <item quantity="other"> baths</item>
+        <item quantity="one"> bath</item>
+    </plurals>
+    <plurals name="guest_singlular">
+        <item quantity="other"> guest</item>
+        <item quantity="one"> guest</item>
+    </plurals>
+    <plurals name="private_bath_count">
+        <item quantity="other"> private baths</item>
+        <item quantity="one"> private bath</item>
+    </plurals>
+    <plurals name="shared_bath_count">
+        <item quantity="other"> shared baths</item>
+        <item quantity="one"> shared bath</item>
+    </plurals>
+    <plurals name="bathroom_count">
+        <item quantity="other"> bathrooms</item>
+        <item quantity="one"> bathroom</item>
+    </plurals>
+    <plurals name="review_count">
+        <item quantity="other"> Reviews</item>
+        <item quantity="one"> Review</item>
+    </plurals>
+    <plurals name="night_count">
+        <item quantity="other"> Nights</item>
+        <item quantity="one"> Night</item>
+    </plurals>
+    <plurals name="review_count_profile">
+        <item quantity="other">%1$d Reviews</item>
+        <item quantity="one">%1$d Review</item>
+    </plurals>
+    <plurals name="day_count">
+        <item quantity="other"> days</item>
+        <item quantity="one"> day</item>
+    </plurals>
+    <plurals name="home_count" tools:ignore="MissingDefaultResource">
+        <item quantity="other"> Homes</item>
+        <item quantity="one"> Home</item>
+    </plurals>
+</resources>

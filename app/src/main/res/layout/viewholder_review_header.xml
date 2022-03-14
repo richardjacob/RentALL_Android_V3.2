@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <variable
+            name="reviewsCount"
+            type="Integer" />
+        <variable
+            name="displayCount"
+            type="Integer" />
+        <variable
+            name="large"
+            type="Boolean" />
+        <variable
+            name="isBlack"
+            type="Boolean" />
+        <variable
+            name="paddingStart"
+            type="Boolean" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="@{paddingStart?@dimen/paddingReviewHeader:@dimen/paddingListing}"
+        android:layoutDirection="locale">
+
+        <ImageView
+            android:id="@+id/img_review_header_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_star_fill"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textDirection="locale"
+            disReviewsCount="@{reviewsCount}"
+            disDisplayCount="@{displayCount}"
+            android:layout_toEndOf="@+id/img_review_header_image"
+            android:layout_centerVertical="true"
+            android:textSize="@{large? @dimen/text_size_h3 : @dimen/text_size_h2}"
+            android:textColor="@{isBlack? @color/text_color : @color/status_bar_color}"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/linetocircular"
+            />
+
+    </RelativeLayout>
+</layout>

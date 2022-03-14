@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_listing_details"
+    android:layout_width="match_parent"
+    app:layout_collapseMode="none"
+    android:layout_height="?android:attr/actionBarSize"
+    app:contentInsetStart="0dp"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="locale">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_navigateup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_navigateup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_clear_black_24dp"
+                tools:ignore="ContentDescription"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:layout_margin="15dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+            <ImageView
+                android:id="@+id/backToLsit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:visibility="gone"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_rightside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/rl_toolbar_navigateup">
+
+            <TextView
+                android:id="@+id/tv_rightside"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/logintext"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_h1"
+                android:paddingStart="@dimen/toolbar_padding"
+                android:paddingEnd="@dimen/toolbar_padding"
+                android:visibility="gone"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:textDirection="locale"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

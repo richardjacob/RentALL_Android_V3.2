@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "RentALL">]>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="app_name" translatable="false">&appname;</string>
+
+    <!--Signup Screen-->
+    <string name="logintext">Log In</string>
+    <string name="login_txt">Login</string>
+    <string name="signup">Signup</string>
+    <string name="welcome_to_appname">Welcome to &appname;</string>
+    <string name="fb_button">Continue with Facebook</string>
+    <string name="google_button">Continue with Google</string>
+    <string name="email_button">Create Account</string>
+    <string name="please_login_to_verify_your_email">Please Login to verify your Email.</string>
+    <string name="terms_and_privacy" tools:ignore="MissingTranslation">By tapping Continue, Create Account or More options, I agree to &appname;\'s Terms of Service, Payments Terms of Service, Privacy Policy, and Non-Discrimination Policy.</string>
+    <string name="confirm">Confirm %s</string>
+    <string name="iban_number">IBAN Number</string>
+
+    <!--Name Creation Screen-->
+    <string name="what_your_name">What\'s your name?</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="last_name">LAST NAME</string>
+
+    <!--Email Creation Screen-->
+    <string name="your_email">And, your email?</string>
+    <string name="email_address">EMAIL ADDRESS</string>
+    <string name="email_promotional">I\'d like to receive promotional communications, including discounts, surveys, inspiration, and love from &appname;
+        via email, SMS, and phone</string>
+
+    <!--Create Passsword Screen-->
+    <string name="create_password">Create a password</string>
+    <string name="password_condition_text">Your password must be 8 or more characters long. Do not use any common passwords, repetition or sequences. Try making it longer or adding symbols, like /!,/#,or /%</string>
+    <string name="password">PASSWORD</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
+
+    <!--DOB Screen-->
+    <string name="when_birthday">When is your birthday?</string>
+    <string name="age_limit">You must be at least 18 years old to use &appname;. Others won\'t see your birthday.</string>
+    <string name="birthday">BIRTHDAY</string>
+
+    <!--Login Screen-->
+    <string name="forgotpassword">Forgot Password?</string>
+
+    <!--Forgot Password Screen-->
+    <string name="forgot_your_password">Forgot your \npassword?</string>
+    <string name="enter_email">Enter your email to find your \naccount.</string>
+    <string name="link_msg">A link to reset your password has been sent to %s</string>
+
+    <!--Change Password Screen-->
+    <string name="change_your_password">Reset Your Password</string>
+    <string name="new_password">NEW PASSWORD</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="success_reset_msg">Password reset successfully. Please Login to continue</string>
+
+    <!--BottomNavigation menu label-->
+    <string name="menu_1">EXPLORE</string>
+    <string name="saved">SAVED</string>
+    <string name="menu_2">TRIPS</string>
+    <string name="menu_3">INBOX</string>
+    <string name="menu_4">PROFILE</string>
+    <string name="menu_5">LISTINGS</string>
+    <string name="menu_6">CALENDAR</string>
+    <string name="menu_7">PROGRESS</string>
+
+
+    <!--Explore Screen-->
+    <string name="search_box">Try “Los Angeles”</string>
+    <string name="dates">Dates</string>
+    <string name="guestscount">%d Guests</string>
+    <string name="filterscount">%d Filters</string>
+    <string name="filter">Filter</string>
+    <string name="filter_small"> filter</string>
+    <string name="filters_small"> filters</string>
+    <string name="listings_you_can_book_without_waiting_for_host_approval" tools:ignore="ExtraTranslation">Listings you can book without waiting for host approval.</string>
+    <string name="instant_book">Instant Book</string>
+    <string name="no_result">No Results</string>
+    <string name="no_results_found">No results found</string>
+    <string name="no_list_found">No Listing found</string>
+    <string name="try_adjusting_your_search_here_are_some_ideas">  Try adjusting your search. Here are some ideas:</string>
+    <string name="change_your_filters_or_dates">\u2022 Change your filters or dates</string>
+    <string name="entire_house">Entire House</string>
+    <string name="price_per_night">$245 per night</string>
+    <string name="list_name">Contemporary Chalet - Lake Annecy</string>
+    <string name="search_for_a_specific_city_address">\u2022 Search for a specific city, address</string>
+    <string name="most_viewed">Most Viewed Listing</string>
+    <string name="recommed_viewed">Recommended Listings</string>
+
+    <!--Guest Screen-->
+    <string name="guest">Guest</string>
+    <string name="guests">Guests</string>
+    <string name="guest_small"> guest</string>
+    <string name="guests_small"> guests</string>
+    <string name="plus">%d+</string>
+    <string name="see_results">See results</string>
+
+    <!--Search Screen-->
+    <string name="reset">Reset</string>
+    <string name="where">Where to?</string>
+    <string name="nearby">Nearby</string>
+
+    <!--Filter Screen-->
+    <string name="clear">Clear</string>
+    <string name="price_range">Price range</string>
+    <string name="facilities">Facilities</string>
+    <string name="amenities">Amenities</string>
+    <string name="show_all_amenities">Show all amenities</string>
+    <string name="close_all_amenities">Close all amenities</string>
+    <string name="home_type">Home type</string>
+    <string name="Rooms_and_beds">Rooms and beds</string>
+    <string name="show_all_facilities">Show all facilities</string>
+    <string name="close_all_facilities">Close all facilities</string>
+    <string name="house_rules">House Rules</string>
+    <string name="show_all_house_rules">Show all house rules</string>
+    <string name="close_all_house_rules">Close all house rules</string>
+    <string name="Facilities">Facilities</string>
+
+    <!--Profile Screen-->
+    <string name="divider">/</string>
+    <string name="phone">Phone Number</string>
+    <string name="location_edit">Location</string>
+    <string name="edit_about_me">Edit about me</string>
+    <string name="email">Email</string>
+    <string name="languages">Languages</string>
+    <string name="preferred_language">Preferred language</string>
+    <string name="email_info_edit">This is used for login and emails from &appname; and it not shared with other users.</string>
+    <string name="edit_name">Edit Name</string>
+    <string name="about_me">About me</string>
+    <string name="private_details">Private Details</string>
+    <string name="gender">Gender</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="Error_msg">Sorry, we had trouble updating your %s at this time</string>
+    <string name="logout">Logout</string>
+    <string name="grant_camera_permission">Grant Permission to access your gallery and photos</string>
+    <string name="why_host">Why Host?</string>
+    <string name="terms_n_privacy">Terms and Privacy</string>
+    <string name="about_us">About Us</string>
+    <string name="trust_n_safetyt">Trust and Safety</string>
+    <string name="version">Version</string>
+    <string name="list_your_space">List Your Space</string>
+    <string name="text_one">Become a host by list your space and earn more money</string>
+    <string name="text_two">Choose your own price, availability, rules and much more</string>
+    <string name="text_three">Manage your upcoming reservations easily</string>
+    <string name="text_four">Monitor your payouts for each reservations in single screen</string>
+
+    <string name="email_confirmed">Email Confirmed</string>
+    <string name="document_verification">Document Verification</string>
+    <string name="google_connected">Google Connected</string>
+    <string name="facebook_connected">Facebook Connected</string>
+    <string name="phone_verified">Phone Verified</string>
+    <string name="verified">Verified</string>
+    <string name="verify_phone">Verify Phone Number</string>
+
+
+    <string name="about">About</string>
+
+    <string name="confirm_email">Confirm Email</string>
+    <string name="connect_google">Connect Google</string>
+    <string name="connect_fb">Connect Facebook</string>
+
+    <!--Edit Profile Screen-->
+    <string name="first_name_edit">First Name</string>
+    <string name="last_name_edit">Last Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="done">Done</string>
+    <string name="company">Company</string>
+    <string name="individual">Individual</string>
+    <string name="company_name">Company Name</string>
+    <string name="account_type">Account type</string>
+    <string name="account_type_error">Please choose account type</string>
+    <string name="stripe_error">Connecting your bank account with the platform exception is failed</string>
+
+    <!--Auth token Expire Screen-->
+    <string name="authtoken_desc">Your session has expired, and you have been logged out. Please log in again.</string>
+    <string name="login">Log in</string>
+
+    <!--Error Message-->
+    <string name="invalid_email">Invalid Email.</string>
+    <string name="invalid_email_desc">Please check if your email has been entered correctly.</string>
+    <string name="invalid_login_credentials">Invalid login credentials</string>
+    <string name="show_password">Show Password</string>
+    <string name="error">Error</string>
+    <string name="currently_offline">You are currently offline</string>
+    <string name="birthday_error">Birthday Error.</string>
+    <string name="server_error">Server not respond please try again later!!</string>
+    <string name="to_sign_up">To sign up, you must be 18 or older.</string>
+    <string name="age_18_limit">You must be 18 or older.</string>
+    <string name="email_already_exists">Email already exists</string>
+    <string name="password_error">Password Error</string>
+    <string name="password_limit">Password limit must be more than 7 characters long</string>
+    <string name="something_went_wrong">Something went wrong. Try again later</string>
+    <string name="reset_password_error">Reset Password Error</string>
+    <string name="reset_password_error_desc">Your request to reset password already expired.</string>
+    <string name="something_went_wrong_action">Something went wrong with your request.</string>
+    <string name="invalid_name">Invalid Name</string>
+    <string name="invalid_name_desc">Both Firstname and Lastname should not be empty</string>
+    <string name="invalid_firstname_desc">First Name should not be empty</string>
+    <string name="invalid_lastname_desc">Last Name should not be empty</string>
+    <string name="invalid_phone">Invalid Phone Number.</string>
+    <string name="invalid_phone_desc">Phone Number should have more than 6 characters</string>
+    <string name="email_not_exist">Email not exist in your FB account, please use another one to sign in.</string>
+    <!--Facebook key-->
+    <string name="facebook_app_id">2198842060401395</string>
+    <string name="fb_login_protocol_scheme">fb2198842060401395</string>
+
+    <!--Gender Dialog-->
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_other">Other</string>
+
+    <!--Currency Dialog-->
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="apply">APPLY</string>
+
+    <!--Cancellation-->
+    <string name="flexible_green">For a full refund of accommodation fees, cancellation must be made a full 24 hours prior to listing’s local check in time (or 3:00 PM if not specified) on the day of check in. For example, if check-in is on Friday, cancel by Thursday of that week before check in time.</string>
+    <string name="flexible_yellow">If the guest cancels less than 24 hours before check-in, the first night is non-refundable.</string>
+    <string name="flexible_red">If the guest arrives and decides to leave early, the accommodation fees for the nights not spent 24 hours after the official cancellation are fully refunded.</string>
+    <string name="moderate_green">For a full refund of accommodation fees, cancellation must be made five full days prior to listing\’s local check in time (or 3:00 PM if not specified) on the day of check in. For example, if check-in is on Friday, cancel by the previous Sunday before check in time.</string>
+    <string name="moderate_yellow">If the guest cancels less than 5 days in advance, the first night is non-refundable but 50% of the accommodation fees for remaining nights will be refunded.</string>
+    <string name="moderate_red">If the guest arrives and decides to leave early, 50% of the accommodation fees for the nights not spent 24 hours after the cancellation occurs are refunded.</string>
+    <string name="strict_red">If the guest cancels less than 7 days in advance, the nights not spent are not refunded.</string>
+    <string name="strict_yellow">For a 50% refund of accommodation fees, cancellation must be made seven full days prior to listing’s local check in time (or 3:00 PM if not specified) on the day of check in, otherwise no refund. For example, if check-in is on Friday, cancel by Friday of the previous week before check in time.</string>
+    <string name="strict_red1">If the guest arrives and decides to leave early, the nights not spent are not refunded.</string>
+    <string name="flexible_day">1 day Prior</string>
+    <string name="moderate_day">5 days Prior</string>
+    <string name="strict_day">7 days Prior</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
+    <string name="anytime">Anytime</string>
+    <string name="flexible_date1">Thu, Jun 08 \n3:00 PM</string>
+    <string name="flexible_date2">Fri, Jun 09 \n3:00 PM</string>
+    <string name="flexible_date3">Mon, Jun 12 \n11:00 AM</string>
+    <string name="moderate_date1">Thu, Jun 08 \n3:00 PM</string>
+    <string name="moderate_date2">Fri, Jun 13 \n3:00 PM</string>
+    <string name="moderate_date3">Mon, Jun 16 \n11:00 AM</string>
+    <string name="strict_date1">Thu, Jun 08 \n3:00 PM</string>
+    <string name="strict_date2">Fri, Jun 15 \n3:00 PM</string>
+    <string name="strict_date3">Mon, Jun 18 \n11:00 AM</string>
+    <string name="cancellation_policy_points">
+
+        \u25AA Cleaning fees are always refunded if the guest did not check in.
+\n\n\u25AA The &appname; service fee is refundable if the guest cancels before the trip starts. If a guest books a reservation that overlaps with any part of an existing reservation, we won’t refund the &appname;
+        service fee if they decide to cancel.
+\n\n\u25AA Accommodation fees (the total nightly rate you\'re charged) are refundable in certain circumstances as outlined below.
+\n\n\u25AA If there is a complaint from either party, notice must be given to &appname; within 24 hours of check-in.
+\n\n\u25AA &appname; will mediate when necessary, and has the final say in all disputes.
+\n\n\u25AA A reservation is officially canceled when the guest clicks the cancellation button on the cancellation confirmation page, which they can find in Dashboard > Your Trips > Cancel.
+\n\n\u25AA Cancellation policies may be superseded by the Guest Refund Policy, extenuating circumstances, or cancellations by &appname;
+        for any other reason permitted under the Terms of Service. Please review these exceptions.
+\n\n\u25AA Applicable taxes will be retained and remitted.
+
+    </string>
+    <string name="exact_location_provided_after_booking">Exact location provided after booking</string>
+    <string name="currency">Currency</string>
+    <string name="preferred_currency">Preferred currency</string>
+    <string name="book_txt">Book</string>
+    <string name="message">Message</string>
+    <string name="itinerary">Itinerary</string>
+    <string name="approve">Approve</string>
+    <string name="decline">Decline</string>
+    <string name="receipt">Receipt</string>
+    <string name="cancel_">Cancel</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="pay_with_your_credit_card">Pay with your credit card</string>
+    <string name="pay">Pay</string>
+    <string name="send_message">Send Message</string>
+    <string name="start_planning_your_first_adventure_on_appname">Start planning your first \n adventure on &appname;</string>
+
+    <!--Birthday-->
+    <string name="set_your_birthday">Set your birth date</string>
+
+    <!--Common-->
+    <string name="retry">Retry</string>
+    <string name="show_all">Show all</string>
+    <string name="show_less">Show less</string>
+    <string name="okay">Okay</string>
+
+    <!--User Profile-->
+    <string name="verified_info">Verified Info"</string>
+    <string name="review">Review</string>
+    <string name="delete">Delete</string>
+    <string name="make_it_public">Make it public</string>
+    <string name="public_text">Public</string>
+    <string name="private_text">Private</string>
+    <string name="public_savedlist_desc">Visible to everyone and on your included public &appname;
+        profile.</string>
+    <string name="private_savedlist_desc">Visible only to you.</string>
+    <string name="view_and_edit">View and edit profile</string>
+
+    <!--Email Verification -->
+    <string name="email_address_small">Email Address</string>
+    <string name="email_verifiy_header">Please verify your email address</string>
+    <string name="verify_email_text">Verify Email</string>
+    <string name="already_verified_text">You have verified your email address</string>
+    <string name="verify_email_send">An verification email is sent to your mail</string>
+    <string name="error_message_for_verify">It seems the email or token is invaild</string>
+    <string name="resend_email">Resend verify email</string>
+    <string name="facebook_header">Facebook</string>
+    <string name="fb_sub_text">Sign in with Facebook and discover your trusted connections to hosts and guests all over the world.</string>
+    <string name="google_header">Google</string>
+    <string name="google_sub_text">Connect your account to your Google account for simplicity and ease.</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="trust_verify">Trust and Verification</string>
+
+    <!--Cancellation-->
+    <string name="start_in">Start In</string>
+    <string name="staying_for">Staying for</string>
+    <string name="traveling_with">Traveling With</string>
+    <string name="tell_why_you_need_to_cancel">Tell why you need to cancel</string>
+    <string name="a_personal_note_can_help_understand_why_you_want_to_cancel_your_reservation">A personal note can help understand why you want to cancel your reservation</string>
+    <string name="the_reservation_will_be_canceled_immediately">The reservation will be canceled immediately</string>
+    <string name="non_refundable">Non-Refundable</string>
+    <string name="refundable">Refundable</string>
+    <string name="keep_reservation">Keep reservation</string>
+    <string name="tell_you_hint">A personal note can help %1$s understand why you want to cancel your reservation</string>
+    <string name="tell_you">Tell %1$s why you need to cancel</string>
+    <string name="enter_msg">Please Enter the message</string>
+    <string name="write_your_message_here">Write your message here</string>
+    <string name="send">SEND</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="uh_oh">Uh-oh!</string>
+    <string name="we_can_t_seem_to_find_the_anything_that_you_re_looking_for">We can`t seem to find the anything that you`re looking for!</string>
+    <string name="error_code_404">Error code: 404</string>
+    <string name="explore_appname">Explore &appname;</string>
+    <string name="cancel_your_reservation">Cancel your reservation</string>
+    <string name="day">day</string>
+    <string name="missed_earnings">Missed Earnings</string>
+    <string name="will_be_refunded_the_full_reservation_cost"> will be refunded the full reservation cost</string>
+    <string name="cancel_your_trip">Cancel your trip</string>
+    <string name="you_will_be_refunded_with_the_above_cost">You will be refunded with the above cost</string>
+    <string name="will_be_refunded_with_the_above_cost">will be refunded with the above cost</string>
+    <string name="reservation_cancelled">Reservation Cancelled</string>
+
+    <!--Confirm Phone number Screen -->
+    <string name="confirm_phnumber">Confirm your phone number</string>
+    <string name="ph_phone">PHONE</string>
+    <string name="guests_contact">This is so hosts or guests can contact you during a trip, and &appname;
+        knows how to reach you.</string>
+
+    <!-- FourDigit code Screen -->
+    <string name="enter_four_digit">Enter 4-digit code</string>
+    <string name="code_sent">We\'ve just sent a code to the registered number. Enter the code in that message.</string>
+    <string name="digit_code">4-DIGIT CODE</string>
+    <string name="send_again">Send the code again</string>
+    <string name="change_number">Change my number</string>
+
+    <!--Saved WishList-->
+    <string name="nothing_saved_yet">Nothing saved yet</string>
+    <string name="limit_exceeded">Title length must be less than 250 characters.</string>
+    <!--Listing-->
+    <string name="max">max</string>
+    <string name="min">min</string>
+    <string name="per_night">per night</string>
+
+
+    <!--Booking Screen-->
+    <string name="please_add_a_msg_to_ur_host">Please add a message to your host.</string>
+    <string name="add_msg">Add message</string>
+    <string name="tell_your_host_about_your_trip">Tell your host about your trip</string>
+    <string name="help_your_host_prepare_for_your_stay_by_answering_their_questions">Help your host prepare for your stay by answering their questions</string>
+    <string name="review_and_pay">Review and pay</string>
+    <string name="review_cancel_desc">I agree to the House Rules, Cancellation Policy, and the Guest Refund Policy. I also agree to pay the total amount shown, which includes Service Fees.</string>
+    <string name="book_your_stay">Book your stay</string>
+    <string name="please_keep_in_mind">Please, keep in mind</string>
+    <string name="add_your_profile_photo">Add your profile photo</string>
+    <string name="dollar_currency">(BGN)</string>
+    <string name="dollar_amount">$1234.23</string>
+    <string name="checkIn">Check-in</string>
+    <string name="checkOut">Checkout</string>
+    <string name="profile_photo_desc">This helps your host recognize you when you meet, so make sure it shows your face.</string>
+    <string name="avg_rate_per_night">Average rate per night for your trip.</string>
+    <string name="stripe_tooltip_text">We use Stripe to make sure you get paid on time safe and secure. It requires additional verification to connect your bank account with the platform.</string>
+    <!-- <string name="max">max</string>
+    <string name="max">max</string>-->
+
+
+    <!-- Host Initial Activity -->
+    <string name="become_host">Become a Host</string>
+    <string name="publish_listing">Your Listing is Published!</string>
+    <string name="publish_now">Publish Now</string>
+    <string name="unpublish_now">UnPublish Now</string>
+    <string name="preview_listing">Preview Listing</string>
+    <string name="change">Change</string>
+    <string name="Continue">Continue</string>
+    <string name="preview">Preview</string>
+    <string name="next">Next</string>
+
+    <!-- Host Initial Activity -->
+    <string name="save_and_exit">Save and exit</string>
+    <string name="lets_get_ready">Hi ! Lets get you ready to become a host.</string>
+    <string name="step_one">STEP 1</string>
+    <string name="what_kindof_place">What kind of place do you have?</string>
+    <string name="entire_place">Entire Place</string>
+    <string name="for_guest">For 1 guest</string>
+    <string name="edit_your_payout_methods">Edit your payout methods</string>
+    <string name="say_your_space">Say your space</string>
+    <string name="step_one_content">Beds, bathrooms, amenities, and more</string>
+    <string name="set_the_screen">Set the scene</string>
+    <string name="step_two_content">Photos, short description, title</string>
+    <string name="get_ready_for_guest">Get ready for guests</string>
+    <string name="step_three_content">Booking settings, trip length, price</string>
+    <string name="STEP1">STEP 1</string>
+    <string name="STEP2">STEP 2</string>
+    <string name="STEP3">STEP 3</string>
+
+    <!--Become Host - Step 2-->
+    <string name="save_exit">Save and exit</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="add_photo_to_your_listing">Add photos to your listing</string>
+    <string name="add_photo_sub_text">Photos help guests imagine staying in your place. You can start with one and add more after you publish.</string>
+    <string name="add_cover_header">Choose a photo for cover image</string>
+    <string name="cover">COVER PHOTO</string>
+    <string name="name_your_listing">Name your listing</string>
+    <string name="title_sub_text">Attract guests with a listing title that highlights what makes your place special.</string>
+    <string name="add_title">Add title</string>
+    <string name="title">Title</string>
+    <string name="edit_desc">Edit your description</string>
+    <string name="desc">Description</string>
+    <string name="summary">Summary</string>
+    <string name="desc_hint">Describe the decor,light,what\'s nearby etc…</string>
+    <string name="add_title_alert">Please add a title to your list.</string>
+    <string name="add_desc_alert">Please add a description to your list.</string>
+
+    <!--Become Host - Step 3-->
+    <string name="guest_req">Review guest requirements</string>
+    <string name="guest_req_sub">Requires all guests to submit the following before they can book:</string>
+    <string name="set_house_rule">Set house rules for your guests</string>
+    <string name="house_rule_sub">Guests must agree to your House Rules before they book.</string>
+    <string name="how_book">How guests book: Instantly</string>
+    <string name="how_book_sub">Guests can book available days instantly as long as they:</string>
+    <string name="meet_req">Guests who don\’t meet your \nrequirements must send a \nreservation request.</string>
+
+    <string name="notice_header">How much notice do you need before a guest arrives?</string>
+    <string name="booking_window">Booking Window</string>
+    <string name="advance_notice">Advance Notice</string>
+    <string name="adv_notice_text">How much notice do you need before a guest arrives?</string>
+    <string name="when_checkin">When can a guests check in?</string>
+    <string name="when_guest_checkin">When can guests check in?</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="cancel_policy">Cancellation Policy</string>
+    <string name="trip_length">Trip length</string>
+
+    <string name="base_price">Base Price</string>
+    <string name="price_text">Your base price is your default nightly rate.</string>
+    <string name="cleaning_price">Cleaning Price</string>
+    <string name="base_price_hint">Price per night</string>
+    <string name="price_breakdown">Price Breakdown</string>
+    <string name="cleaning_price_hint">Cleaning Price</string>
+    <string name="discounts">Discounts</string>
+    <string name="discount_long">Discount for longer stays</string>
+    <string name="weekly_discount">Weekly discount</string>
+    <string name="monthly_discount">Monthly discount</string>
+    <string name="discount_hint">% off</string>
+
+    <string name="min_stay">Minimum Stay\n(Nights)</string>
+    <string name="max_stay">Maximum Stay\n(Nights)</string>
+
+    <string name="price_error_text">Invalid Base Price, only numbers(eg: 25) are allowed</string>
+    <string name="cleaning_price_error">Invalid Cleaning Price, only numbers(eg: 25) are allowed</string>
+    <string name="base_price_error">Base Price is required</string>
+    <string name="invalid_user_info">Invalid info</string>
+    <string name="invalid_info">User info should not be empty</string>
+    <string name="invalid_location">Invalid location</string>
+    <string name="location_should_not_be_empty">Location should not be empty</string>
+    <string name="flexible_check_in_time">Flexible check in time</string>
+    <string name="upto">Upto</string>
+    <string name="stay_error_text">Minimum nights can`t be higher than maximum nights</string>
+    <string name="discount_error_text">Invalid discount. The discount must be between 0% and 99%.</string>
+    <string name="checkin_error_text">From time should be earlier than To time</string>
+    <string name="time">Time</string>
+
+    <string name="instant_book_title">Increase your earnings with Instant Book</string>
+    <string name="instant_book_text">Instant Book can give your listing an edge. Not only do guests prefer to book instantly, we’re promoting Instant Book listings in search results.</string>
+    <string name="who_booked">Who can book instantly</string>
+    <string name="choose_book">CHOOSE WHO CAN BOOK AVAILABLE DAYS WITHOUT REQUESTING APPROVAL.</string>
+    <string name="auto_approval_text">Guests who meet your requirements and agree to your rules.</string>
+    <string name="auto_sub">Anyone else must send a reservation request.</string>
+    <string name="auto_app_sub">Anyone else must send a reservation request.</string>
+    <string name="not_auto_approve">No one. All guests must send reservation requests.</string>
+    <string name="local_laws">Your local laws and taxes</string>
+    <string name="local_laws_text">Take a moment to review your local laws. We want to make sure you\’ve got everything you need to get off to a great start.</string>
+    <string name="local_laws_content">Please educate yourself about the laws in your jurisdiction before listing your space.\n\nMost cities have rules covering homesharing, and the specific codes and ordinances can appear in many places (such as zoning, building, licensing or tax codes). In most places, you must register, get a permit, or obtain a license before you list your property or accept guests. You may also be responsible for collecting and remitting certain taxes. In some places, short-term rentals could be prohibited altogether.\n\nSince you are responsible for your own decision to list or book, you should get comfortable with the applicable rules before listing on &appname;. To get you started, we offer some helpful resources under \“Your City Laws.\”\n\nBy accepting our Terms of Service and listing your space, you certify that you will follow applicable laws and regulations.</string>
+    <string name="decimal_string">0123456789.</string>
+    <string name="number_string">0123456789</string>
+
+    <string name="before_publish">Your Listing is ready to Publish!</string>
+    <string name="after_publish">Your Listing is Published!</string>
+    <string name="publish">Publish Now</string>
+    <string name="unpublish">Unpublish Now</string>
+    <string name="listed">Listed</string>
+    <string name="unlisted">Unlisted</string>
+
+    <string name="listing">Listing</string>
+    <string name="in_progress">In progress</string>
+    <string name="completed">Completed</string>
+
+    <string name="confrim_delete">Are you sure you want delete the Listing?</string>
+
+
+    <!--Book step 1-->
+    <string name="agree">Agree</string>
+    <string name="for_">"for"</string>
+    <string name="step_1_of_3">Step 1 of 3</string>
+    <string name="step_1_of_4">Step 1 of 4</string>
+    <string name="reservation_charges">Reservation Charges</string>
+    <string name="service_fee">Service Fee</string>
+    <string name="fee_tax_details">Fee / Tax Details</string>
+    <string name="cleaning_fee">Cleaning Fee</string>
+    <string name="total">Total</string>
+
+    <!--Review and payment-->
+    <string name="step_3_of_3">Step 3 of 3</string>
+    <string name="step_4_of_4">Step 4 of 4</string>
+    <string name="add_payment">Add Payment</string>
+    <string name="payment_failed">Payment Failed</string>
+    <string name="cancellation_policy">Cancellation policy</string>
+    <string name="cancellation_policy_with_dot">Cancellation policy: </string>
+    <string name="try_after">Something went wrong.. Please try again</string>
+    <string name="invail_card">Your card is Invalid. Please Enter the correct card details</string>
+    <string name="enter_card_again">Please Enter the correct card details </string>
+
+    <!--Step 2-->
+    <string name="step_2_of_3">Step 2 of 3</string>
+    <string name="step_2_of_4">Step 2 of 4</string>
+
+    <!--Step 3-->
+    <string name="step_3_of_5">Step 3 of 5</string>
+    <string name="check_your_email">Check your email</string>
+
+    <!--Step 4-->
+    <string name="step_3_of_4">Step 3 of 4</string>
+    <string name="image_size_is_too_large">Image size is too large.</string>
+    <string name="tap_the_link_in_the_email_we_sent_you_Confirming_your_email_address_helps_us_send_you_trip_information">Tap the link in the email we sent you. Confirming your email address helps us send you trip information.</string>
+
+    <!--Inbox-->
+    <string name="messages">Messages</string>
+    <string name="no_messages_yet">No messages yet</string>
+    <string name="when_you_find_a_place_you_love_connect_with_the_host_tell_them_a_bit_about_yourself_and_the_purpose_of_your_trip">When you find a place you love, connect with the host. Tell them a bit about yourself and the purpose of your trip</string>
+    <string name="start_exploring">Start Exploring</string>
+    <string name="new_message">New Message</string>
+    <string name="write_a_message">Write a message</string>
+    <string name="inbox">Inbox</string>
+    <string name="no_inbox_msg">When guests contact you or send you reservation requests, you’ll see their messages here.</string>
+
+
+    <string name="pre_approved_header">Invite %s to book by pre-approving this trip</string>
+    <string name="pre_approved_sub_text">Let %s know these dates are available by pre-approving them</string>
+    <string name="timer_text_before">Respond within %s</string>
+    <string name="pre_approval_text">Pre-approve</string>
+    <string name="request_book_text">%s sent a request to booking for your listing</string>
+
+
+    <string name="book_header">Your booking request approved by %s</string>
+    <string name="book_with_in">You have to book within %s</string>
+    <string name="book_button">Book</string>
+    <string name="request_approved">Request Approved</string>
+    <string name="approval_text">Your guest have 24 hours to respond to this or it will get expired</string>
+
+    <string name="booking_request_cancelled">Booking request is cancelled</string>
+    <string name="cancelled_content">%s booking request is cancelled.</string>
+    <string name="booking_cancelled_by_guest">Your booking request is cancelled.</string>
+
+    <string name="declined_booking">Request declined</string>
+    <string name="declined_content">Make sure your calendar is up-to-date and that your listing page accurately reflects your house rules and requirements.</string>
+    <string name="declined_guest_content">Your request is declined by host. You can choose different dates or search for other listing.</string>
+
+    <string name="booking_confirmed_txt">Booking is confirmed</string>
+    <string name="host_cancel_text">You can contact your guest and do necessary arrangements or you can cancel.</string>
+    <string name="guest_cancel_text">You can contact your host and do necessary arrangements or you can cancel your reservation.</string>
+    <string name="cancel_reserve">Cancel Reservation</string>
+
+    <string name="request_to_book_header">You messaged %s about their listing</string>
+    <string name="respond_text">If this listing is your top choice, enter your payment information to officially request a reservation.</string>
+
+    <string name="trip_is_completed">Trip is completed</string>
+    <string name="your_trip_is_completed">Your trip is completed.</string>
+    <string name="reserv_compelted">Reservation is completed</string>
+    <string name="completed_content">Reservation of your listing is completed.</string>
+
+    <string name="request_to_book_txt">Your booking request sent to %s for their listing</string>
+    <string name="most_host_respond">Most hosts respond within 24 hours.</string>
+
+    <!--Listing sub screens-->
+    <string name="cancellation">Cancellation</string>
+    <string name="example">Example</string>
+    <string name="please_select_date">Please Select Date</string>
+    <string name="please_select_guest">Please Select guest</string>
+    <string name="please_enter_the_message">Please enter the message</string>
+    <string name="add_date">Add date</string>
+    <string name="details">Details</string>
+    <string name="inn">in</string>
+    <string name="location">Location</string>
+    <string name="you_cannot_book_your_own_list">You cannot book your own List</string>
+    <string name="please_select_another_date_to_book">Please select another date to book</string>
+    <string name="info">Info</string>
+    <string name="no_dates_available_to_book_please_select_another_date">No dates available to book. Please select another date</string>
+    <string name="verified_by">Verified by</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="check_out_this_listing_on_appname">Check out this listing on &appname;</string>
+
+    <!--Listing screen-->
+    <string name="check_availability">Check availability</string>
+    <string name="this_listing_is_not_available_to_book">This Listing is not available to book</string>
+    <string name="similar_listing">Similar Listings</string>
+    <string name="private_baths">private baths</string>
+    <string name="shared_baths">shared baths</string>
+    <string name="read_more">read more…</string>
+    <string name="read_more_with_out_dot">Read More</string>
+    <string name="min_max_nights">Min / Max Nights</string>
+    <string name="contact_host">Contact Host</string>
+    <string name="check">Check</string>
+    <string name="availability">Availability</string>
+    <string name="read">Read</string>
+    <string name="check_out_time">Check-in end time</string>
+    <string name="check_in_time">Check-in start time</string>
+    <string name="user_safety">Safety features</string>
+    <string name="safety_amenities">Safety Amenities</string>
+    <string name="user_space">Shared Spaces</string>
+    <string name="hosted_by">Hosted by </string>
+    <string name="read_all_space">Read all </string>
+    <string name="reviews">Reviews</string>
+    <string name="reviews_small">reviews</string>
+    <string name="review_small">review</string>
+    <string name="verification">Verification</string>
+    <string name="not_ready">Not Ready</string>
+
+    <string name="email_not_verified">Email is not verified. Please verify it.</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="your_message_sent_to_host">Your message sent to the host.</string>
+    <string name="you_cannot_unpublish">You cannot unpublish as you have upcoming bookings or enquiries for this listing.</string>
+    <string name="you_cannot_delete">You cannot delete this list as it has upcoming bookings or enquiries.</string>
+    <string name="you_cannot_remove_photos">You cannot remove photos as you have upcoming bookings or enquiries for this listing.</string>
+
+    <!--Payout Screen-->
+    <string name="enter_correct_card_details">Enter correct card details</string>
+    <string name="your_card_is_invalid">Your card is Invalid</string>
+    <string name="set_up_your_appname_payout_method">Set up your &appname; payout method</string>
+    <string name="your_payout_is_what_you_earn_from_hosting_a_guest_payouts_are_sent_24_hours_after_each_check_in">Your payout is what you earn from hosting a guest. Payouts are sent 24 hours after each check-in.</string>
+    <string name="learn_more_about_payouts">Learn more about payouts</string>
+    <string name="payouts">Payouts</string>
+    <string name="start">Start</string>
+    <string name="default_txt">Default</string>
+    <string name="set_default">set default</string>
+    <string name="currency_payout">Currency: </string>
+    <string name="address_line_one">Address Line 1</string>
+    <string name="address_line_two">Address Line 2</string>
+    <string name="state_or_province">State / Province</string>
+    <string name="zip_or_postal">Zip Code / Postal Code</string>
+    <string name="routing_number">Routing number</string>
+    <string name="sort">SORT number</string>
+    <string name="account_number">Account number</string>
+    <string name="confirm_acc_number">Confirm account number</string>
+    <string name="ssn_digit">SSN last 4 digits</string>
+
+    <string name="dob_msg">Oops! Please add your date of birth in your edit profile.</string>
+    <string name="dob">DOB</string>
+
+    <!--Profile Screen-->
+    <string name="member_since">Member Since</string>
+    <string name="switch_to_travelling">Switch to travelling</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="payout_preference">Payout Preference</string>
+    <string name="switch_to_hosting">Switch to hosting</string>
+    <string name="become_a_host">Become a Host</string>
+    <string name="ok">OK</string>
+    <string name="setting">Settings</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="get_help">Get help</string>
+    <string name="give_feedback">Give us feedback</string>
+    <string name="feedback">Feedback</string>
+    <string name="bug">Bug</string>
+    <string name="update_error">Update listing error:</string>
+    <string name="how_we_doing">How are we doing?</string>
+    <string name="feedback_content">We\'re always working to improve the &appname; experience, so we\'d love to hear what\'s working and how we can do better.</string>
+    <string name="like_to_do">What would you like to do?</string>
+    <string name="give_product_feedback">Give product feedback</string>
+    <string name="report_bug">Report a bug</string>
+    <string name="help_header">Help</string>
+    <string name="sign_up_error">SignUp error: </string>
+    <string name="terms_privacy">Terms &amp; Privacy</string>
+    <string name="trust_and_safty">Trust and Safety</string>
+    <string name="enter_feedback">Enter your feedback here</string>
+    <string name="enter_bug_here">Enter a bug here</string>
+    <string name="please_enter_feedback">Please enter any Feedback!</string>
+    <string name="pls_enter_bug">Please enter any Bug!</string>
+    <string name="your_feedback">Your </string>
+    <string name="has_been_sent"> has been sent successfully!</string>
+    <string name="feedback_sent">Your Feedback has been sent successfully!</string>
+
+    <!--Trust and verification Screen-->
+    <string name="confirmation_link_is_sent_to_your_email">Confirmation link is sent to your email.</string>
+    <string name="invalid_link">Invalid link</string>
+    <string name="your_email_is_confirmed">Your email is confirmed</string>
+    <string name="facebook_disconnected">Facebook Disconnected</string>
+    <string name="google_disconnected">Google Disconnected</string>
+
+    <!--Confirm Phone Screen-->
+    <string name="phone_number">Phone Number</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="we_sent_the_code_to_your_phone_number">We\'ve sent the code to your phone number</string>
+    <string name="the_entered_4_digit_code_is_incorrect">The entered 4 digit code is incorrect</string>
+    <string name="select_the_country">Select the country / region for your number</string>
+
+    <!--Saved screen-->
+    <string name="create"> Create</string>
+    <string name="please_enter_the_title_of_wishlist_group">Please enter the title of wishlist group</string>
+    <string name="choose_list">Choose a list</string>
+    <string name="create_a_list">Create a List</string>
+
+    <!--Contact us screen-->
+    <string name="your_message_sent_successfully_we_will_contact_you_soon">Your message sent successfully. We will contact you soon.</string>
+
+    <!--Trips screen-->
+    <string name="upcoming_trips">Upcoming Trips</string>
+    <string name="previous_trips">Previous Trips</string>
+    <string name="where_to">Where to?</string>
+    <string name="no_listFound">No List Found</string>
+
+    <!--User profile screen-->
+    <string name="inappropriate_content_of_spam">Inappropriate content of spam</string>
+    <string name="do_you_want_to_report_this_user">Do you want to report this User?</string>
+    <string name="if_so_please_choose_one_of_the_following_reasons">If so, please choose one of the following reasons.</string>
+    <string name="this_profile_should_not_be_on_appname">This profile should not be on &appname;</string>
+    <string name="attempt_to_share_contact_information">Attempt to share contact information</string>
+    <string name="reported_successfully">Reported Successfully</string>
+    <string name="read_all">Read all</string>
+    <string name="google_verification">Google Verification</string>
+    <string name="facebook_verification">Facebook Verification</string>
+    <string name="learn_more">Learn more</string>
+    <string name="report_this_user">Report this User</string>
+    <string name="please_select_the_option">Please select the options</string>
+    <string name="spam">Spam</string>
+    <string name="direct_contact">Direct contact</string>
+    <string name="shouldnt_available">Shouldn\'t available</string>
+
+    <!--Reservation screen-->
+    <string name="message_host">Message host</string>
+    <string name="host">Host</string>
+    <string name="view_Listing">View Listing</string>
+    <string name="address">Address</string>
+    <string name="shared_room">Shared Room</string>
+    <string name="view_receipt">View Receipt</string>
+    <string name="reservation_code">Reservation code:</string>
+    <string name="you_are_going_to">You\'re going to</string>
+    <string name="billing">Billing</string>
+    <string name="receipt_desc">is authorized to accept Accommodation Fees on behalf of the Host as its limited agent. This means that your payment obligation to the Host is satisfied by your payment to &appname;. Any of the Host\'s disagreements by the Host regarding that payment must be settled between the Host and &appname;.</string>
+    <string name="payment_received">Payment Received:</string>
+    <string name="accommodation_host">Accommodation Host</string>
+    <string name="accommodation_address">Accommodation Address</string>
+    <string name="accommodation_type">Accommodation Type</string>
+    <string name="duration">Duration</string>
+    <string name="travel_destination">Travel Destination</string>
+    <string name="name">Name</string>
+    <string name="confirmation_code">Confirmation code:</string>
+    <string name="customer_receipt">Customer Receipt</string>
+    <string name="savedd">Saved</string>
+    <string name="no_wishlist_groups_added_please_create_group_by_click_add_icon">No wishlist groups added. Please create group by click add icon.</string>
+    <string name="delete_list">Delete list</string>
+    <string name="DELETE">DELETE</string>
+    <string name="CANCEL" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete</string>
+    <string name="when_you_see_something_you_like_tap_on_the_heart_to_save_it_if_you_re_planning_a_trip_with_others_invite_them_so_they_can_save_and_vote_on_their_favorites">When you see something you like, tap on the heart to save it. If you\'re planning a trip with others, invite them so they can save and vote on their favorites.</string>
+
+    <!--Calendar screen-->
+    <string name="blocked">Blocked</string>
+    <string name="your_dates_updated">Your dates updated</string>
+    <string name="booked">Booked</string>
+    <string name="not_available">Not Available</string>
+    <string name="available">Available</string>
+    <string name="save">Save</string>
+    <string name="calendar">Calendar</string>
+    <string name="when_you_publish_a_listing_you_ll_be_able_to_see_and_edit_your_calendar_here">When you publish a listing you\'ll be able to see and edit your calendar here.</string>
+
+    <!--Payout screen-->
+    <string name="please_select_currency">Please select currency</string>
+    <string name="please_enter_valid_email_address">Please enter valid email address</string>
+    <string name="please_enter_email_address">Please enter email address</string>
+    <string name="please_enter_zip_code">Please enter zip code</string>
+    <string name="please_enter_the_state">Please enter state</string>
+    <string name="please_enter_street">Please enter street</string>
+    <string name="please_enter_city">Please enter city</string>
+    <string name="please_enter_address_1">Please enter Address 1</string>
+    <string name="please_enter_ssn">Please enter SSN</string>
+    <string name="please_enter_correct_confirm_account_number">Please enter correct confirm %s</string>
+    <string name="please_enter_confirm_account_number">Please enter confirm %s</string>
+    <string name="please_enter_account_number">Please enter %s</string>
+    <string name="please_enter_routing_number">Please enter routing number</string>
+    <string name="please_enter_sort_number">Please enter SORT number</string>
+
+    <string name="please_enter_last_name">Please enter last name</string>
+    <string name="please_enter_first_name">Please enter first name</string>
+    <string name="finish">Finish</string>
+    <string name="account_details_of_payout">Account details of Payout</string>
+    <string name="address_of_payout">Address of Payout</string>
+    <string name="paypal">PayPal</string>
+    <string name="bank_account">Bank Account</string>
+    <string name="paypal_desc">PayPal is an online payment processing service that allows you to receive payments from &appname;. To use PayPal with &appname;, you must have an existing account with PayPal.</string>
+    <string name="choose_how_we_pay_you">Choose how we pay you</string>
+    <string name="fees">Fees</string>
+    <string name="processed_in">Processed in</string>
+    <string name="countries">countries</string>
+    <string name="result_not_found">Result Not Found</string>
+    <string name="search_for_country_region">Search for country/region</string>
+    <string name="add_payout_method">Add payout method</string>
+    <string name="status">Status</string>
+    <string name="ready">Ready</string>
+
+    <!--Upload photo screen-->
+    <string name="add_description">Add description</string>
+    <string name="update">update</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="please_add_a_title_to_your_list">Please add a title to your list.</string>
+    <string name="please_add_a_description_to_your_list">Please add a description to your list.</string>
+    <string name="upload_failed">Upload Failed</string>
+    <string name="photo">Photo</string>
+    <string name="select_list_photos">Select List Photos</string>
+    <string name="add_photo">Add Photos</string>
+
+    <!--Steps One-->
+    <string name="last_updated_on">Last Updated on</string>
+    <string name="You_re">You\'re</string>
+    <string name="done_with_your_listing">done with your listing</string>
+    <string name="delete_listing">Delete Listing</string>
+    <string name="you_re_100_done_with_your_listing">You’re 100% done with your listing</string>
+    <string name="you_don_t_have_any_listings">You don`t have any listings!</string>
+    <string name="make_money_by_renting_out_your_extra_space_you_ll_also_get_to_meet_interesting_travelers_from_around_the_world">Make money by renting out your extra space. You`ll also get to meet interesting travelers from around the world!</string>
+    <string name="post_a_new_listing">Post a new Listing</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="past">Past</string>
+    <string name="you_don_t_have_any_upcoming_reservations">You don\'t have any upcoming reservations!</string>
+    <string name="you_don_t_have_any_previous_reservations">You don\'t have any previous reservations!</string>
+    <string name="reservation_approved">Reservation Approved</string>
+    <string name="reservation_declined">Reservation Declined</string>
+    <string name="error_1">Error!</string>
+    <string name="please_enter_country">Please Enter Country</string>
+    <string name="please_enter_state">Please Enter State</string>
+    <string name="incorrect_location">Incorrect Location</string>
+    <string name="where_your_place_located">Where\'s your place located ?</string>
+    <string name="only_confirmed_guests_will_get_your_exact_address_after_they_book__We_ll_show_everyone_else_an_approximate_location">Only confirmed guests will get your exact address after they book. We\'ll show everyone else an approximate location</string>
+    <string name="country_region">Country/Region</string>
+    <string name="afghanistan">Afghanistan</string>
+    <string name="street">Street</string>
+    <string name="main_st">eg. 123 Main St</string>
+    <string name="apt_suite_etc">Apt, suite, etc., (optional)</string>
+    <string name="apt">eg. Apt #7</string>
+    <string name="city">City</string>
+    <string name="san_francisco">eg. San Francisco</string>
+    <string name="state">State</string>
+    <string name="ca">CA</string>
+    <string name="zip_postal_code">Zip/Postal Code</string>
+    <string name="code">94101</string>
+    <string name="hwat_amenities_will_you_offer">What amenities will you offer ?</string>
+    <string name="please_fill_them">Please fill them !</string>
+    <string name="it_seems_you_have_missed_some_required_fields_in_address_page">It seems you have missed some required fields in address page. !</string>
+    <string name="you_have_entered_an_incorrect_location">You have entered an Incorrect Location</string>
+    <string name="what_spaces_can_guests_use">What spaces can guests use ?</string>
+    <string name="guests_like_to_know_if_this_is_a_place_you_live_and_keep_your_personal_belongings_in">Guests like to know if this is a place you live and keep your personal belongings in</string>
+    <string name="ss_this_your_personal_home">Is this your personal home ?</string>
+    <string name="how_many_total_rooms_does_your_property_have">How many total rooms does your property have ?</string>
+    <string name="what_will_guest_have">What will guest have ?</string>
+    <string name="what_type_of_property_is_this">What type of property is this ?</string>
+    <string name="what_kind_of_place_are_you_listing">What kind of place are you listing ?</string>
+    <string name="is_the_pin_in_the_right_place">Is the pin in the right place ?</string>
+    <string name="tn">TN</string>
+    <string name="madurai">Madurai</string>
+    <string name="how_many_guests_can_stay">How many guests can stay ?</string>
+    <string name="total_guest">Total guest</string>
+    <string name="total_guests">Total guests</string>
+    <string name="bedroom_for_guest">Bedroom for guest</string>
+    <string name="Bedroom_for_guests">Bedroom for guests</string>
+    <string name="bed_for_guest">Bed for guest</string>
+    <string name="bed_for_guests">Bed for guests</string>
+    <string name="select_country">Select Country</string>
+    <string name="For">For</string>
+    <string name="continuee">Continue</string>
+
+    <string name="bed_count">Bed Count</string>
+    <string name="choosen_bed_count_is_exceeded_than_bed_for_guest_count">Choosen bed count is exceeded than bed for guest count</string>
+    <string name="maximum_bed_count_is_selected">Maximum bed count is selected</string>
+    <string name="how_many_beds_can_guest_use">How many beds can guest use ?</string>
+    <string name="smoke_detector">Smoke Detector</string>
+    <string name="carbon_monoxide_detector">Carbon monoxide Detector</string>
+    <string name="first_aid_kit">First aid kit</string>
+    <string name="fire_extinguisher">Fire Extinguisher</string>
+    <string name="private_entrance">Private entrance</string>
+    <string name="flexible">Flexible</string>
+    <string name="moderate">Moderate</string>
+    <string name="strict">Strict</string>
+    <string name="unavailable">Dates unavailable by default</string>
+    <string name="three_month">3 months into the future</string>
+    <string name="six_month">6 months into the future</string>
+    <string name="nine_month">9 months into the future</string>
+    <string name="available_by_default">All future dates</string>
+    <string name="twelve_month">12 months into the future</string>
+    <string name="add_price">Add Prices</string>
+    <string name="guests_txt">Guests</string>
+    <string name="search_here">Search here</string>
+    <string name="Inquiry">Inquiry</string>
+    <string name="request_to_book">Request to book</string>
+    <string name="book">Book</string>
+    <string name="pre_approved">Pre Approved</string>
+    <string name="declined">Declined</string>
+    <string name="Declined">declined</string>
+    <string name="cancelled_by_host">Cancelled by host</string>
+    <string name="cancelled_by_guest">Cancelled by guest</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="expired">Expired</string>
+    <string name="approved">Approved</string>
+    <string name="reflection"></string>
+    <string name="message_small">message</string>
+    <string name="booking_confirmed">Booking Confirmed</string>
+    <string name="pending">Pending</string>
+    <string name="how_many_bathrooms">How many bathrooms ?</string>
+    <string name="remove">Remove</string>
+
+    <string name="list_not_available">List is not available</string>
+
+    <!--Firebase-->
+    <string name="notif_action_reply">Reply</string>
+
+    <!--Host calendar-->
+    <string name="specialPrice">Special Price</string>
+    <string name="edit">Edit</string>
+    <string name="specialPriceToLongPress">Special Price - Long press to see price</string>
+    <string name="please_enter_special_price">Please enter the special price</string>
+    <string name="spl_price_valid">Please enter a vaild special price</string>
+    <string name="verify">VERIFY</string>
+    <string name="default_caps">DEFAULT</string>
+    <string name="set_default_caps">SET DEFAULT</string>
+    <string name="ok_text">OK</string>
+    <string name="about_you">ABOUT YOU</string>
+    <string name="by_you">BY YOU</string>
+    <string name="reviews_to_write">Reviews to Write</string>
+    <string name="past_reviews">Past Reviews</string>
+    <string name="no_reviews_yet">No reviews yet</string>
+    <string name="you_reviewed">You reviewed</string>
+    <string name="write_a_review">Write a Review</string>
+    <string name="view_itinerary">View Itinerary</string>
+    <string name="submit_a_public_review_for">Submit a public review for</string>
+    <string name="submit">Submit</string>
+    <string name="describe_your_experience">Describe your experience (required)</string>
+    <string name="your_review_will_be_public">Your review will be public on your guest profile</string>
+    <string name="your_review_will_be_public_on_your_host_profile">Your review will be public on your host profile</string>
+    <string name="what_was_it_like_to_host_this_guest">What was it like to host this guest</string>
+    <string name="overall_rating">Overall Rating</string>
+    <string name="description">Description</string>
+    <string name="rating">Rating</string>
+    <string name="required">Required</string>
+    <string name="stripe" translatable="false">Stripe</string>
+    <string name="invalid">Invalid</string>
+    <string name="select_payment_type">Select payment type</string>
+    <string name="please_select_payment_type_to_continue">Please select any payment type to continue</string>
+    <string name="return_url_not_fount">Return url not found</string>
+    <string name="reservation_id_not_found">Reservation id not found</string>
+    <string name="payment_type">Payment type</string>
+    <string name="proceed_to_pay">Proceed to pay</string>
+    <string name="payment_cancelled">Payment cancelled</string>
+    <string-array name="label_calender_month">
+        <item name="0" />
+        <item name="1">January</item>
+        <item name="2">February</item>
+        <item name="3">March</item>
+        <item name="4">April</item>
+        <item name="5">May</item>
+        <item name="6">June</item>
+        <item name="7">July</item>
+        <item name="8">August</item>
+        <item name="9">September</item>
+        <item name="10">October</item>
+        <item name="11">November</item>
+        <item name="12">December</item>
+    </string-array>
+    <string name="popular_location">Popular Destinations</string>
+    <string name="unsupported_format">Unsupported file format</string>
+
+
+    <string name="ready_ver">Your listing is ready for verification</string>
+    <string name="submitted_ver">Your listing is submitted for verification</string>
+    <string name="sub_verify">Submit for verification</string>
+    <string name="waiting">Waiting for approval</string>
+    <string name="appeal">Submit for appeal</string>
+    <string name="submitting">Submitting the listing for Admin Verification…</string>
+    <string name="about_list">About this listing</string>
+</resources>

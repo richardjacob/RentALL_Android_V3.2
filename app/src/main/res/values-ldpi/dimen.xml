@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="toolbar_padding">15dp</dimen>
+    <dimen name="text_size_title">29sp</dimen>
+    <dimen name="layout_padding">15dp</dimen>
+    <dimen name="text_size_h1">14sp</dimen>
+    <dimen name="text_size_h1_5">16sp</dimen>
+    <dimen name="text_size_h2">18sp</dimen>
+    <dimen name="text_size_h3">22sp</dimen>
+    <dimen name="text_size_h4">26sp</dimen>
+    <dimen name="text_size_h5">29sp</dimen>
+
+    <dimen name="buttonCorner">2.0dip</dimen>
+    <dimen name="c_grouped_layout_padding">1.25dip</dimen>
+    <dimen name="gutter_padding">16.0dip</dimen>
+
+    <dimen name="paddingListing">20dp</dimen>
+    <dimen name="no_padding">0dp</dimen>
+
+    <dimen name="photo_size">100dp</dimen>
+</resources>

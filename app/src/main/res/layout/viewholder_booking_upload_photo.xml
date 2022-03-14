@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="img"
+            type="String"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="ContentDescription"
+            img="@{img}"
+            android:onClick="@{onClick}"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_photo"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curve_button_red"
+            android:onClick="@{onClick}"
+            />
+    </LinearLayout>
+
+</layout>

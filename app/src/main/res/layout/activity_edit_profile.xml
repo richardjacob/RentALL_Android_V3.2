@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.profile.edit_profile.EditProfileViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:id="@+id/roota"
+        android:focusable="true"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/toolbar_editprofile"
+            style="@style/Toolbar"/>
+
+        <!--suppress AndroidUnknownAttribute -->
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_below="@id/action_bar"
+            style="@style/ScrollView"
+            app:viewModel="@{viewModel}"
+            addView="@{viewModel.layoutId}">
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

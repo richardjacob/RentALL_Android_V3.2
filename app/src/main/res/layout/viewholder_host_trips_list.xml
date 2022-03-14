@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="status"
+            type="String"/>
+        <variable
+            name="namePrice"
+            type="String"/>
+        <variable
+            name="date"
+            type="String"/>
+        <variable
+            name="title"
+            type="String"/>
+        <variable
+            name="street"
+            type="String"/>
+        <variable
+            name="address"
+            type="String"/>
+        <variable
+            name="messageVisibility"
+            type="Boolean"/>
+        <variable
+            name="approveVisibility"
+            type="Boolean"/>
+        <variable
+            name="declineVisibility"
+            type="Boolean"/>
+        <variable
+            name="cancelVisibility"
+            type="Boolean"/>
+        <variable
+            name="supportVisibility"
+            type="Boolean"/>
+        <variable
+            name="receiptVisibility"
+            type="Boolean"/>
+        <variable
+            name="messageClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="approveClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="declineClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="receiptClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="cancelClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="supportClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/ll_links">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{status}"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="3dp"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="5dp"
+                    statusBg="@{status}"
+                    android:textColor="@color/white"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_host_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{namePrice}"
+                    android:visibility="@{(namePrice != null) ? View.VISIBLE : View.GONE}"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tv_status"
+                    android:textColor="@color/text_color"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{date}"
+                    android:textSize="15sp"
+                    android:layout_below="@id/tv_host_name"
+                    android:textColor="@color/text_color"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{(title != null) ? title : @string/no_listFound}"
+                    android:onClick="@{onClick}"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="15sp"
+                    android:layout_below="@id/tv_date"
+                    android:textColor="@{(title != null) ? @color/colorPrimary : @color/snackbar_text_red}"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{street}"
+                    android:visibility="@{(street != null) ? View.VISIBLE : View.GONE}"
+                    android:textSize="15sp"
+                    android:layout_below="@id/tv_title"
+                    android:textColor="@color/text_color"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{address}"
+                    android:visibility="@{(address != null) ? View.VISIBLE : View.GONE}"
+                    android:textSize="15sp"
+                    android:layout_below="@id/tv_street"
+                    android:textColor="@color/text_color"
+                    android:textDirection="locale"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_links"
+                android:layout_width="wrap_content"
+                android:minWidth="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/message"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minWidth="50dp"
+                    android:gravity="end"
+                    android:onClick="@{messageClick}"
+                    android:visibility="@{messageVisibility ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="50dp"
+                    android:text="@string/receipt"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:ems="3"
+                    android:gravity="end"
+                    android:onClick="@{receiptClick}"
+                    android:visibility="@{receiptVisibility ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/approve"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minWidth="50dp"
+                    android:gravity="end"
+                    android:onClick="@{approveClick}"
+                    android:visibility="@{approveVisibility ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decline"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minWidth="50dp"
+                    android:gravity="end"
+                    android:onClick="@{declineClick}"
+                    android:visibility="@{declineVisibility ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel_"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minWidth="50dp"
+                    android:gravity="end"
+                    android:onClick="@{cancelClick}"
+                    android:visibility="@{cancelVisibility ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_support"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minWidth="50dp"
+                    android:gravity="end"
+                    android:onClick="@{supportClick}"
+                    android:visibility="@{supportVisibility ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="locale"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#d9d9d9" />
+
+    </LinearLayout>
+
+</layout>

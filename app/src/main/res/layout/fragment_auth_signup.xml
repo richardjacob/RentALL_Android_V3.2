@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_background"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            layout="@layout/toolbar"/>
+
+        <ScrollView
+            style="@style/ScrollView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    app:srcCompat="@drawable/ic_logo_white"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_below="@id/iv_logo"
+                    android:layout_marginStart="6dp"
+                    style="@style/AuthScreenTitle"
+                    android:textDirection="locale"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_signin_btns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_welcome"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:id="@+id/btn_fb"
+                        android:text="@string/fb_button"
+                        android:drawableStart="@drawable/ic_facebook"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        style="@style/AuthScreenSignupButton"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_google"
+                        android:layout_below="@id/btn_fb"
+                        android:text="@string/google_button"
+                        android:drawableStart="@drawable/ic_google_glass_logo"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        style="@style/AuthScreenSignupButton"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_create_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_google"
+                        android:background="@drawable/button_outline"
+                        android:text="@string/email_button"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:foreground="@drawable/ripple_effect_white"
+                        android:textSize="@dimen/text_size_h2"
+                        tools:targetApi="m" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_below="@id/rl_signin_btns"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/terms_and_privacy"
+                    style="@style/AuthScreenUserInfoTextView"
+                    android:textDirection="locale"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

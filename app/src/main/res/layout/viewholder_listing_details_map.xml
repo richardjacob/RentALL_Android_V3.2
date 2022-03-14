@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="img"
+            type="String" />
+        <variable
+            name="location"
+            type="String" />
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{clickListener}"
+        android:layoutDirection="locale">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            imgUrl="@{img}"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:background="@drawable/signpost"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12.0dip"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size_h1_5"
+                android:textColor="@color/text_color"
+                android:text="@{location}"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_h1"
+                android:textColor="@color/text_color"
+                android:layout_below="@+id/tv_location"
+                android:text="@string/exact_location_provided_after_booking"
+                android:textDirection="locale"/>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

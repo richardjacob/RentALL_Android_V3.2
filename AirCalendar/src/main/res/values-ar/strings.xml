@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AirCalendar</string>
+
+    <string name="sans_serif" translatable="false">sans-serif</string>
+    <string-array name="label_calender_week">
+        <item name="0"></item>
+        <item name="1">S</item>
+        <item name="2">M</item>
+        <item name="3">T</item>
+        <item name="4">W</item>
+        <item name="5">T</item>
+        <item name="6">F</item>
+        <item name="7">S</item>
+    </string-array>
+    <string name="clear">واضح</string>
+    <string name="dates_not_available">تلك التواريخ غير متوفرة</string>
+    <string name="save">حفظ</string>
+    <string name="check_in">تحقق في</string>
+    <string name="check_out">الدفع</string>
+    <string name="start_date">تاريخ البدء</string>
+    <string name="end_date">تاريخ الانتهاء</string>
+
+
+</resources>

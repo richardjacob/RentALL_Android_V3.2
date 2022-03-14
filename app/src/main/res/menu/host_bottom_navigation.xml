@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:checked="true"
+        android:title="@string/menu_5"
+        android:icon="@drawable/ic_receipt_black_24dp"  />
+    <item
+        android:title="@string/menu_6"
+        android:icon="@drawable/ic_calendar" />
+    <item
+        android:title="@string/menu_7"
+        android:icon="@drawable/ic_rocket" />
+    <item
+        android:checked="true"
+        android:title="@string/menu_3"
+        android:icon="@drawable/ic_speech_bubble" />
+    <item
+        android:title="@string/menu_4"
+        android:icon="@drawable/ic_user" />
+</menu>

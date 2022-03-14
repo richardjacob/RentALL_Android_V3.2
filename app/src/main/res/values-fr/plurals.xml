@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"  tools:ignore="ImpliedQuantity">
+    <plurals name="bed_count">
+        <item quantity="other"> des lits</item>
+        <item quantity="one"> lit</item>
+    </plurals>
+    <plurals name="bedroom_count">
+        <item quantity="other"> chambres à coucher</item>
+        <item quantity="one"> chambre</item>
+    </plurals>
+    <plurals name="guest_count">
+        <item quantity="other"> invités</item>
+        <item quantity="one"> client</item>
+    </plurals>
+
+    <plurals name="guest_singlular">
+        <item quantity="other"> client</item>
+        <item quantity="one"> client</item>
+    </plurals>
+    <plurals name="bath_count">
+        <item quantity="other"> bains privés</item>
+        <item quantity="one"> bain privé</item>
+    </plurals>
+    <plurals name="review_count">
+        <item quantity="other"> Avis</item>
+        <item quantity="one"> La revue</item>
+    </plurals>
+    <plurals name="night_count">
+        <item quantity="other"> Nuits</item>
+        <item quantity="one"> Nuit</item>
+    </plurals>
+    <plurals name="review_count_profile">
+        <item quantity="other">%1$d Avis</item>
+        <item quantity="one">%1$d La revue</item>
+    </plurals>
+    <plurals name="day_count">
+        <item quantity="other"> journées</item>
+        <item quantity="one"> journée</item>
+    </plurals>
+    <plurals name="home_count" tools:ignore="MissingDefaultResource">
+        <item quantity="other"> Maisons</item>
+        <item quantity="one"> Accueil</item>
+    </plurals>
+</resources>

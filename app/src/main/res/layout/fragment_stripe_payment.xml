@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/pay_with_your_credit_card"
+            android:textDirection="locale"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/card_input_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pay"
+            android:layout_marginTop="20dp"
+            android:layoutDirection="ltr"
+            android:padding="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_payPayment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:elevation="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="15dp">
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/curve_button_red"
+                android:fontFamily="@font/linetocircular"
+                android:text="@string/pay"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>

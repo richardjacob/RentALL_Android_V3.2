@@ -1,0 +1,162 @@
+#Get Profile Details
+query GetProfile {
+ userAccount {
+   result {
+        userId
+        profileId
+        firstName
+        lastName
+        displayName
+        gender
+        dateOfBirth
+        email
+        userBanStatus
+        phoneNumber
+        preferredLanguage
+        preferredLanguageName
+        preferredCurrency
+        location
+        info
+        createdAt
+        picture
+        country
+        loginUserType
+        isAddedList
+        verification {
+          id
+          isEmailConfirmed
+          isFacebookConnected
+          isGoogleConnected
+          isIdVerification
+          isPhoneVerified
+        }
+        userData {
+          type
+        }
+        verificationCode
+        countryCode
+        loginUserType
+           isAddedList
+   }
+   status
+   errorMessage
+ }
+}
+
+# Edit Profile
+mutation EditProfile (
+   $userId: String!,
+   $fieldName: String!,
+   $fieldValue: String,
+   $deviceType: String!,
+   $deviceId: String!) {
+   userUpdate (
+       userId: $userId,
+       fieldName: $fieldName,
+       fieldValue: $fieldValue,
+       deviceType: $deviceType,
+       deviceId: $deviceId,
+   ) {
+       status
+       errorMessage
+       userToken
+   }
+}
+#{
+#	"userId": "58270ec0-c25a-11e8-bf3c-53acf8c17f62",
+#	"fieldName": "firstName",
+#	"fieldValue": "[\"Laxman\", \"Vel\"]",
+#	"deviceType": "android",
+#	"deviceId": "123456789"
+#}
+# Fields        Value
+# Name          [\"Laxman\", \"Vel\"]
+# email         admin@admin.com
+# gender        male, female, other
+# dateOfBirth   MM-YYYY-DD
+# phoneNumber   9876543210
+# location      12, london England
+# info          Hello /n hai /n
+
+
+#Preferred Languages
+query userPreferredLanguages{
+    userLanguages {
+        status
+        errorMessage
+        result {
+            label
+            value
+        }
+    }
+}
+
+#UserBan Status
+query UserBanStatus {
+  getUserBanStatus {
+    status
+    userBanStatus
+    errorMessage
+  }
+}
+
+#SendVerifyEmail
+query SendConfirmEmail{
+  ResendConfirmEmail {
+    results{
+      id
+      userId
+       profile {
+        firstName
+        userData {
+          email
+        }
+      }
+      token
+      email
+      status
+    }
+  	status
+    errorMessage
+
+  }
+}
+
+#Verify Confirm Code
+mutation CodeVerification(
+    $token: String!,
+    $email: String!,
+){
+    EmailVerification(
+        token: $token,
+        email: $email
+    ) {
+        status
+    errorMessage
+    }
+}
+
+#Social Login Verification
+mutation SocialLoginVerify(
+    $verificationType: String!,
+    $actionType: String!) {
+   SocialVerification(
+   verificationType: $verificationType,
+   actionType: $actionType ) {
+        status
+        errorMessage
+   }
+}
+
+#feedback
+mutation sendUserFeedback ($type: String, $message: String){
+  userFeedback(type: $type, message: $message){
+    status
+    errorMessage
+  }
+}
+
+
+
+
+

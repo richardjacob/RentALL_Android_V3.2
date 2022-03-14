@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    android:background="@android:color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="locale">
+
+    <ImageView
+        android:id="@+id/iv_add_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="@dimen/toolbar_padding"
+        android:paddingEnd="@dimen/toolbar_padding"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:id="@+id/backToLsit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:visibility="gone"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/listing"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textColor="@color/text_color"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:layout_toStartOf="@id/iv_add_list"
+        android:layout_centerVertical="true"
+        android:textDirection="locale"
+        />
+
+</RelativeLayout>

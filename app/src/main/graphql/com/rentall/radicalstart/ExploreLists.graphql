@@ -1,0 +1,145 @@
+query getExploreListings{
+# MostViewedListing
+
+  getMostViewedListing {
+
+   results {
+       popularLocationListing {
+           id
+           location
+           locationAddress
+           image
+           isEnable
+           createdAt
+           updatedAt
+       }
+    id
+    title
+    personCapacity
+    beds
+    bookingType
+    coverPhoto
+    reviewsCount,
+    reviewsStarRating,
+    listPhotos {
+      id
+      name
+      type
+      status
+    }
+    listingData {
+      basePrice
+      currency
+    }
+    settingsData {
+      listsettings {
+        id
+        itemName
+      }
+    }
+    wishListStatus
+    wishListGroupCount
+    isListOwner
+    listPhotoName
+    roomType
+    }
+   status
+  }
+  # Recommend Listing
+  getRecommend {
+
+    results {
+
+       id
+       title
+       personCapacity
+       beds
+       bookingType
+       coverPhoto
+       reviewsCount,
+       reviewsStarRating,
+       listPhotos {
+         id
+         name
+         type
+         status
+       }
+       listingData {
+         basePrice
+         currency
+       }
+       settingsData {
+         listsettings {
+           id
+           itemName
+         }
+       }
+       wishListStatus
+       wishListGroupCount
+       isListOwner
+       listPhotoName
+       roomType
+    }
+    status
+  }
+    # Currency Rate
+    Currency {
+        result {
+            base
+            rates
+        }
+        status
+        errorMessage
+    }
+
+    #Default price in filter
+    getSearchSettings {
+        results {
+            id
+            minPrice
+            maxPrice
+            priceRangeCurrency
+        }
+        status
+        errorMessage
+    }
+
+    # Filters
+    getListingSettingsCommon {
+        status
+        errorMessage
+        results {
+            id
+            typeName
+            fieldType
+            typeLabel
+            step
+            isEnable
+            listSettings {
+                id
+                typeId
+                itemName
+                otherItemName
+                maximum
+                minimum
+                startValue
+                endValue
+                isEnable
+            }
+        }
+    }
+    # Site Settings
+    siteSettings {
+        status
+        errorMessage
+        results{
+            id
+            title
+            name
+            value
+            type
+            status
+
+        }
+    }
+}

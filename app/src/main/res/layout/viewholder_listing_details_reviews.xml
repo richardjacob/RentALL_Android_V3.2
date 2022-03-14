@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="imgUrl"
+            type="String" />
+        <variable
+            name="name"
+            type="String" />
+        <variable
+            name="date"
+            type="String" />
+        <variable
+            name="comment"
+            type="String" />
+        <variable
+            name="padding"
+            type="Boolean" />
+        <variable
+            name="isAdmin"
+            type="Boolean"/>
+         <variable
+            name="onAvatarClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@{padding ? @dimen/paddingListing : @dimen/no_padding}"
+        android:paddingEnd="@{padding ? @dimen/paddingListing : @dimen/no_padding}"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layoutDirection="locale">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_listing_comment_review_1_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            img="@{imgUrl}"
+            isAdmin="@{isAdmin}"
+            android:layout_alignParentStart="true"
+            android:onClick="@{onAvatarClick}"
+            />
+
+        <TextView
+            android:id="@+id/tv_listing_comment_review_1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{name}"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginStart="15dp"
+            android:textSize="@dimen/text_size_h1"
+            android:layout_toEndOf="@id/iv_listing_comment_review_1_img"
+            android:textDirection="locale"/>
+
+        <TextView
+            android:id="@+id/tv_listing_comment_review_1_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            memberSince="@{date}"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_h1"
+            android:layout_toEndOf="@id/iv_listing_comment_review_1_img"
+            android:layout_below="@id/tv_listing_comment_review_1_name"
+            android:textDirection="locale"/>
+
+        <TextView
+            android:id="@+id/tv_listing_comment_review_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_h1_5"
+            android:layout_below="@id/iv_listing_comment_review_1_img"
+            android:text="@{comment}"
+            android:textDirection="locale"/>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#d9d9d9"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_below="@id/tv_listing_comment_review_1"
+            android:visibility="@{isDividerVisible ? View.VISIBLE : View.GONE}"
+            />-->
+
+    </RelativeLayout>
+
+</layout>

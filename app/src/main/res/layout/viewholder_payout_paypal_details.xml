@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="email"
+            type="androidx.databinding.ObservableField&lt;String&gt;"/>
+        <variable
+            name="currency"
+            type="androidx.databinding.ObservableField&lt;String&gt;"/>
+        <variable
+            name="payoutCurrency"
+            type="String" />
+        <variable
+            name="currencyClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_carddetails_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="3dp"
+            card_view:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={email}"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:background="@null"
+                    android:hint="@string/email_address_small"
+                    android:textColor="@color/text_color"
+                    card_view:ignore="Autofill,LabelFor,TextFields"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"/>
+
+                <View
+                    android:id="@+id/view_eight_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:visibility="visible"
+                    android:background="#d9d9d9" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:text="@{payoutCurrency}"
+                    android:onClick="@{currencyClick}"
+                    android:textDirection="locale"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

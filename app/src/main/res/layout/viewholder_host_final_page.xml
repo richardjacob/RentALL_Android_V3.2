@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="step"
+            type="String"/>
+        <variable
+            name="heading"
+            type="String"/>
+        <variable
+            name="content"
+            type="String"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="headingVisibility"
+            type="Boolean"/>
+        <variable
+            name="radioVisibility"
+            type="Boolean"/>
+
+        <variable
+            name="stepStatus"
+            type="String"/>
+
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.host.HostFinalViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="0dp"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:id="@+id/tv_step_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/search_text_color"
+            android:text="@{step}"
+            android:textDirection="locale"/>
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="22sp"
+            android:padding="5dp"
+            android:visibility="@{headingVisibility? View.VISIBLE : View.GONE}"
+            android:layout_below="@id/tv_step_number"
+            android:textColor="@color/text_color"
+            android:text="@{heading}"
+            android:textDirection="locale"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_below="@id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginEnd="40dp"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/text_color"
+            android:text="@{content}"
+            android:textDirection="locale"/>
+
+        <ImageView
+            android:id="@+id/radio"
+            android:layout_below="@id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:visibility="@{radioVisibility? View.VISIBLE : View.GONE}"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/check_radio_on" />
+
+        <TextView
+            android:id="@+id/tv_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:padding="5dp"
+            textVisible="@{stepStatus}"
+            android:onClick="@{clickListener}"
+            android:layout_below="@id/tv_content"
+            android:textColor="@color/colorAccent"
+            android:textDirection="locale"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/tv_change"
+            android:background="@color/search_divider_line"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            />
+
+    </RelativeLayout>
+</layout>

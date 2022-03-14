@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="reviewsCount"
+            type="Integer" />
+        <variable
+            name="reviewsStarRating"
+            type="Integer" />
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="22dp"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_button_gray_outline_small"
+            android:onClick="@{clickListener}"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_listing_cancellation_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/show_all+` ` +  reviewsCount + ` ` + @string/reviews_small}"
+                android:textSize="18dp"
+                android:textDirection="locale"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:fontFamily="@font/linetocircular"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

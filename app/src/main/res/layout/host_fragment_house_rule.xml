@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.rentall.radicalstart.ui.host.step_three.StepThreeViewModel.NextStep"/>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.host.step_three.StepThreeViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/house_rule_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            layout="@layout/toolbar"/>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rv_house_rule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/house_rule_toolbar"
+            android:padding="10dp"
+            android:layout_marginBottom="50dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_above="@id/tv_next"
+            android:background="@color/edittext_line" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:drawablePadding="5dp"
+            android:textSize="16sp"
+            android:text="@string/next"
+            android:background="@drawable/curve_button_green"
+            android:fontFamily="@font/linetocircular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_next_arrow"
+            style="@style/AuthScreenLottieLayout"
+            android:onClick="@{() -> viewModel.onClick(NextStep.GUESTBOOK)}"
+            android:textDirection="locale"
+            />
+
+    </RelativeLayout>
+
+</layout>

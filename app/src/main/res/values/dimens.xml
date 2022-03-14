@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="n2_tri_state_switch_corner_radius">15dp</dimen>
+    <dimen name="n2_tri_state_switch_half_img_padding">6.3dp</dimen>
+
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="url"
+            type="String"/>
+        <variable
+            name="roomType"
+            type="String"/>
+        <variable
+            name="title"
+            type="String"/>
+        <variable
+            name="price"
+            type="String"/>
+        <variable
+            name="reviewsCount"
+            type="Integer"/>
+        <variable
+            name="ratingStarCount"
+            type="Integer"/>
+        <variable
+            name="bookType"
+            type="String"/>
+        <variable
+            name="wishListStatus"
+            type="Boolean"/>
+        <variable
+            name="isOwnerList"
+            type="Boolean"/>
+        <variable
+            name="heartClickListener"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/cl_explore_listing_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:onClick="@{onClick}"
+        android:layoutDirection="locale">
+
+        <ImageView
+            android:id="@+id/iv_item_listing_saved_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="0dp"
+            imgListing="@{url}"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_item_listing_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            isWishList="@{wishListStatus}"
+            isOwnerList="@{isOwnerList}"
+            android:onClick="@{heartClickListener}"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_item_explore_search_listing_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{roomType}"
+            android:textColor="@color/room_type"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:layout_below="@id/iv_item_listing_saved_image"
+            android:paddingTop="0dp"
+            android:textDirection="locale"/>
+
+        <ImageView
+            android:id="@+id/iv_item_listing_instant_image"
+            instantBook="@{bookType}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_item_explore_search_listing_type"
+            android:layout_alignBottom="@id/tv_item_explore_search_listing_type"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_item_explore_search_listing_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{title}"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/tv_item_explore_search_listing_type"
+            android:textDirection="locale"/>
+
+        <TextView
+            android:id="@+id/tv_item_explore_search_listing_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{price +` ` + @string/per_night}"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:layout_below="@id/tv_item_explore_search_listing_title"
+            android:textDirection="locale"/>
+
+        <RatingBar
+            android:id="@+id/tv_item_explore_search_listing_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:numStars="5"
+            android:progressTint="@color/status_bar_color"
+            reviewsCount="@{reviewsCount}"
+            ratingCount="@{ratingStarCount}"
+            android:secondaryProgressTint="@color/status_bar_color"
+            android:stepSize="1"
+            android:textSize="12sp"
+            android:layout_below="@id/tv_item_explore_search_listing_price"/>
+
+        <TextView
+            android:id="@+id/tv_item_explore_search_listing_ratingNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:visibility="@{(reviewsCount == 0 )? View.GONE : View.VISIBLE}"
+            android:text="@{String.valueOf(reviewsCount)}"
+            android:layout_below="@id/tv_item_explore_search_listing_price"
+            android:layout_toEndOf="@id/tv_item_explore_search_listing_rating"
+            android:textDirection="locale"/>
+
+    </RelativeLayout>
+
+</layout>

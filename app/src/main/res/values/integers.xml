@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="fragment_transition_duration_long_ms">300</integer>
+    <integer name="n2_activity_transition_duration_ms">200</integer>
+    <integer name="n2_activity_transition_duration_long_ms">300</integer>
+    <integer name="n2_fragment_transition_duration_long_ms">300</integer>
+    <integer name="help_template_matcher_keyframe_one">500</integer>
+    <integer name="help_template_matcher_keyframe_three">1500</integer>
+    <integer name="help_template_matcher_keyframe_two">1000</integer>
+    <integer name="help_template_matcher_keyframe_zero">0</integer>
+    <integer name="help_animation_duration_default">500</integer>
+    <integer name="help_template_matcher_keyframe_four">2000</integer>
+    <integer name="help_template_matcher_keyframe_full_duration">3000</integer>
+</resources>

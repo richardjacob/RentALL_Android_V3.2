@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_above="@id/rl_showresult">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/white">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="@color/transparent"
+                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+                        android:background="@color/white" />
+
+                    <include
+                        android:id="@+id/filter_toolbar"
+                        layout="@layout/include_toolbar_listing_sub_screen"/>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rl_listing_amenities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_showresult"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="20dp"
+            android:elevation="10dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_guest_seeresult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/see_results"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/curve_button_blue"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

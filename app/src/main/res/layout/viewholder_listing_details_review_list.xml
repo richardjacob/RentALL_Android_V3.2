@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="imgUrl"
+            type="String" />
+        <variable
+            name="onAvatarClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="isAdmin"
+            type="Boolean" />
+        <variable
+            name="name"
+            type="String" />
+        <variable
+            name="profileId"
+            type="Integer" />
+        <variable
+            name="type"
+            type="String" />
+        <variable
+            name="ratingTotal"
+            type="Double"/>
+        <variable
+            name="reviewsTotal"
+            type="Integer"/>
+        <variable
+            name="reviewContent"
+            type="String" />
+        <variable
+            name="date"
+            type="String" />
+        <variable
+            name="isListingDetails"
+            type="Boolean" />
+    </data>
+    <RelativeLayout
+        android:layout_width="283dp"
+        android:layout_height="190dp"
+        android:padding="20dp"
+        android:background="@drawable/curve_button_gray_outline_large">
+
+        <RelativeLayout
+            android:id="@+id/rel_image_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_circle_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                img="@{imgUrl}"
+                isAdmin="@{isAdmin}"
+                android:onClick="@{onAvatarClick}"
+                android:src="@drawable/placeholder_avatar" />
+
+            <RelativeLayout
+                android:id="@+id/rel_tv_name_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_circle_image"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    spanString="@{name}"
+                    type="@{type}"
+                    profileId="@{profileId}"
+                    isAdmin="@{isAdmin}"
+                    isListing="@{isListingDetails}"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:fontFamily="@font/linetocircular"
+                    android:textSize="14dp"
+                    android:textDirection="locale"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    />
+                <RatingBar
+                    android:id="@+id/tv_item_listing_similar_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    ratingTotal="@{ratingTotal}"
+                    reviewsTotal="@{reviewsTotal}"
+                    android:progressTint="@color/status_bar_color"
+                    android:secondaryProgressTint="@color/status_bar_color"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_name"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_image_name"
+            android:layout_alignStart="@+id/rel_image_name">
+            <TextView
+                android:id="@+id/tv_reviewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{reviewContent}"
+                android:textSize="12dp"
+                android:textColor="@color/text_color_3b"
+                android:textDirection="locale"
+                android:maxLines="4"
+                android:fontFamily="@font/linetocircular"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                memberSinceComma="@{date}"
+                android:textDirection="locale"
+                android:fontFamily="@font/linetocircular"
+                android:layout_below="@+id/tv_reviewContent"
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</layout>

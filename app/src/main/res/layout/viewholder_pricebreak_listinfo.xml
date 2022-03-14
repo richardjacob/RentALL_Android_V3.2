@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="type"
+            type="String"/>
+        <variable
+            name="price"
+            type="String"/>
+        <variable
+            name="rating"
+            type="String"/>
+        <variable
+            name="reviewsCount"
+            type="Integer"/>
+        <variable
+            name="reviewsStarRating"
+            type="Integer" />
+        <variable
+            name="img"
+            type="String"/>
+        <variable
+            name="imageClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/image">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/room_type"
+                android:text="@{type}"
+                android:textAllCaps="true"
+                android:textDirection="locale"
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{price + ` ` + @string/per_night}"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/type"
+                android:textColor="@color/text_color"
+                android:textDirection="locale"/>
+
+            <RatingBar
+                android:id="@+id/tv_listing_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                ratingCount="@{reviewsStarRating}"
+                reviewsCount="@{reviewsCount}"
+                android:progressTint="@color/status_bar_color"
+                android:secondaryProgressTint="@color/status_bar_color"
+                android:layout_below="@id/price"
+                android:layout_marginTop="2dp"
+                style="?android:attr/ratingBarStyleSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price"
+                android:textSize="12sp"
+                android:text="@{reviewsCount > 0 ? reviewsCount + @plurals/review_count(reviewsCount) : reviewsCount + ` ` + @string/review}"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@id/tv_listing_rating"
+                android:textDirection="locale"/>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="112dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            tools:ignore="ContentDescription"
+            android:onClick="@{imageClick}"
+            imgListing="@{img}"/>
+
+    </RelativeLayout>
+
+</layout>

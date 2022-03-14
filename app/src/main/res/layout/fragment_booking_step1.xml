@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.base.BaseViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+           <!-- <include
+                android:id="@+id/inl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                layout="@layout/include_toolbar_listing_sub_screen"/>-->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_listing_details"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_toolbar_navigateup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_navigateup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_clear_black_24dp"
+                        tools:ignore="ContentDescription"
+                        android:layout_centerVertical="true"
+                        android:padding="0dp"
+                        android:layout_margin="15dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rl_booking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_listing_bottom"
+                android:layout_below="@id/toolbar_listing_details"
+                android:paddingBottom="10dp">
+            </com.airbnb.epoxy.EpoxyRecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/rl_listing_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:background="@color/white"
+                android:weightSum="1"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/rl_listing_pricedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_weight=".90">
+
+                    <TextView
+                        android:id="@+id/tv_listing_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_h1_5"
+                        android:textDirection="locale"/>
+
+                    <TextView
+                        android:id="@+id/tv_listing_price_breakdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/status_bar_color"
+                        android:textSize="14sp"
+                        android:textDirection="locale"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_listing_check_availability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agree"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/curve_button_green"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:textDirection="locale"
+                    />
+
+                <Button
+                    android:id="@+id/btn_booking"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/curve_button_red"
+                    android:fontFamily="@font/linetocircular"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_auth_loading_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            goneUnless="@{viewModel.isLoading}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lt_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                app:lottie_rawRes="@raw/loading_qwe"
+                app:lottie_scale="0.4"
+                android:background="@drawable/lottie_background"
+                />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</layout>

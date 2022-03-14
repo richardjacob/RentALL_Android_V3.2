@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="checkIn"
+            type="String"/>
+        <variable
+            name="checkOut"
+            type="String"/>
+        <variable
+            name="startTime"
+            type="String"/>
+        <variable
+            name="endTime"
+            type="String"/>
+        <variable
+            name="timeVisibility"
+            type="Boolean"/>
+        <variable
+            name="ltrDirection"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="17dp"
+        android:weightSum="3"
+        android:baselineAligned="false"
+        android:layoutDirection="locale">
+
+        <LinearLayout
+            android:id="@+id/rl_select_start_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:layout_weight="1.25">
+
+            <TextView
+                android:id="@+id/tv_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:textColor="@color/text_color"
+                android:text="@string/check_in"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:paddingBottom="5dp"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/tv_anytime_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@string/anytime"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:visibility="gone"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@{checkIn}"
+                android:textColor="@color/text_color"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textSize="16sp"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@{startTime}"
+                android:visibility="@{timeVisibility ? View.VISIBLE : View.GONE}"
+                android:textColor="@color/text_color"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textSize="16sp"
+                android:textDirection="locale"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/ripple_white_grey"
+                android:rotation="@{ltrDirection?45:135}" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_select_end_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1.254"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@string/check_out"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:paddingBottom="5dp"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/tv_anytime_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@string/anytime"
+                android:textColor="@color/text_color"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@{checkOut}"
+                android:textColor="@color/text_color"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textSize="16sp"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linetocircular"
+                android:text="@{endTime}"
+                android:visibility="@{timeVisibility ? View.VISIBLE : View.GONE}"
+                android:textColor="@color/text_color"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textSize="16sp"
+                android:textDirection="locale"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

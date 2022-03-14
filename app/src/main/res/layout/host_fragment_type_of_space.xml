@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.rentall.radicalstart.ui.host.step_one.StepOneViewModel.NextScreen"/>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.host.step_one.StepOneViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="locale">
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rv_step_one"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.airbnb.epoxy.EpoxyRecyclerView>
+
+    </RelativeLayout>
+
+</layout>

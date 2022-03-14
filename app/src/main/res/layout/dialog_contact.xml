@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <!--<import type="com.rentall.radicalstart.util.binding.BindingConverters"/>-->
+        <variable
+            name="title"
+            type="String"/>
+        <variable
+            name="msg"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+        <variable
+            name="isLoading"
+            type="androidx.databinding.ObservableBoolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:cardBackgroundColor="#F5F6F5"
+            app:cardCornerRadius="4dp"
+            app:contentPaddingTop="15dp"
+            app:contentPaddingRight="20dp"
+            app:contentPaddingLeft="20dp"
+            app:contentPaddingBottom="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{title}"
+                    android:textSize="20sp"
+                    android:textDirection="locale"/>
+
+                <EditText
+                    android:id="@+id/et_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200dp"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/text_color"
+                    android:gravity="top|start"
+                    android:background="@color/transparent"
+                    android:textColorHint="@color/search_text_color"
+                    android:hint="@string/write_your_message_here"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLines="10"
+                    android:text="@={msg}"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:layout_below="@id/tv_languages"
+                    android:layout_marginTop="30dp"
+                    tools:ignore="Autofill"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"/>
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color"
+                    android:padding="10dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_toStartOf="@id/btn_apply"
+                    android:layout_below="@id/et_msg"
+                    />
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="15dp"
+                    android:padding="10dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/et_msg"
+                    android:enabled="@{isLoading}"
+                    />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lt_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_centerInParent="true"
+                    app:lottie_loop="true"
+                    app:lottie_scale="0.4"
+                    app:lottie_rawRes="@raw/loading_qwe"
+                    android:background="@drawable/lottie_background"
+                    android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"
+                    app:lottie_autoPlay="true"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

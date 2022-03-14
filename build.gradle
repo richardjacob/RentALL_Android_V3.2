@@ -1,0 +1,182 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+
+    ext.versions = [
+            "kotlin"            : "1.4.20",
+            "support_lib"       : '1.2.0',//up
+            "annotation"        :  "1.1.0", //up
+            "constraint"        : '2.0.4',//up
+            "playservice_auth"  : "19.2.0", //up
+            "playservice_map"   : "17.0.1",//up
+            "apollo"            : "2.4.6", //up
+            "glide"             : "4.11.0", // up
+            "lottie"            : "3.5.0", // up
+            "joda_time"         : "2.10.9", //up
+            "lifecycle"         : '2.2.0', // up
+            "room"              : '2.2.6', //up
+            "paging"            : "1.0.0", // not used
+            "fb"                : "11.1.0",
+            "rxjava"            : "2.2.20", // up 2
+            "rxandroid"         : "2.1.1", // up 2
+            "circleimview"      : "3.1.0", //up
+//            "permission"      : "3.3.1",
+            "easy_permission"   : "3.0.0", //up
+            "anko"              : "0.10.8", //up
+            "img_cropper"       : "2.8.0", //up
+            "epoxy"             : "4.1.0", // up before breaking !!!
+            "gson"              : "2.8.5", // up
+            "coroutine"         : "0.25.3", // not used
+            "multislider"       : "1.3", // up
+            "timber"            : "4.7.1", // up
+            "dagger"            : "2.30", // up before breaking !!!
+            "firebase"          : "16.0.1",
+            "firebase_messaging": "20.2.0",
+            "crashlytics"       : "17.0.1",
+            "analytics"         : "17.4.3",
+            "okHttp_logging"    : "4.9.0", // up
+            "stripe"            : "8.1.0", // direct impl
+            "crashActivity"     : "2.2.0", //up
+            "min_sdk"           : 23,
+            "target_sdk"        : 30,
+            "compile_sdk"       : 30,
+            "version_code"      : 1,
+            "version_name"      : "1.0"
+    ]
+
+    ext.deps = [
+
+            //Kotlin
+            "kotlin_gradle_plugin": "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+            "kotlin_stdlib"       : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+
+            //Support Library
+            "app_compat_v7"       : "androidx.appcompat:appcompat:${versions.support_lib}",
+            "support_v4"          : "androidx.legacy:legacy-support-v4:1.0.0", //up
+            "design"              : "com.google.android.material:material:${versions.support_lib}",
+            "recyclerview_v7"     : "androidx.recyclerview:recyclerview:${versions.support_lib}",
+            "cardview_v7"         : "androidx.cardview:cardview:${versions.support_lib}",
+            "annotation"          : "androidx.annotation:annotation:${versions.annotation}",
+
+            //Constraint
+            "constraintLayout"    : "androidx.constraintlayout:constraintlayout:${versions.constraint}",
+
+            //Arch Components
+            "viewModel_liveData"  : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}",
+            "lifecycle_runtime"   : "android.arch.lifecycle:runtime:${versions.lifecycle}",
+            "lifecycle_compiler"  : "androidx.lifecycle:lifecycle-compiler:${versions.lifecycle}",
+            "room"                : "androidx.room:room-runtime:${versions.lifecycle}",
+            "room_compiler"       : "androidx.room:room-compiler:${versions.lifecycle}",
+//            "paging"              : "android.arch.paging:runtime:${versions.lifecycle}",
+
+            //Play Service
+            "places"              : "com.google.android.libraries.places:places:2.0.0",
+            "maps"                : "com.google.android.gms:play-services-maps:${versions.playservice_map}",
+//            "signin"              : "com.google.android.gms:play-services-identity:${versions.playservice}",
+            "google_auth"         : "com.google.android.gms:play-services-auth:${versions.playservice_auth}",
+
+            //Apollo
+            "apollo"              : "com.apollographql.apollo:apollo-runtime:${versions.apollo}",
+            "apollo_gradle_plugin": "com.apollographql.apollo:apollo-gradle-plugin:${versions.apollo}",
+            "apollo_rx2_support"  : "com.apollographql.apollo:apollo-rx2-support:${versions.apollo}",
+            "apollo_cache"        : "com.apollographql.apollo:apollo-http-cache:${versions.apollo}",
+
+            //Glide
+            "glide"               : "com.github.bumptech.glide:glide:${versions.glide}",
+            "glide_compiler"      : "com.github.bumptech.glide:compiler:${versions.glide}",
+
+            //Lottie
+            "lottie"              : "com.airbnb.android:lottie:${versions.lottie}",
+
+            //Joda Time
+            "joda_time"           : "joda-time:joda-time:${versions.joda_time}",
+
+            // Facebook SDK
+            "fb_login"            : "com.facebook.android:facebook-login:${versions.fb}",
+//            "fb_core"             : "com.facebook.android:facebook-core:${versions.fb}",
+
+            //Rx
+            "rxjava"              : "io.reactivex.rxjava2:rxjava:${versions.rxjava}",
+            "rxandroid"           : "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}",
+
+            //CircleImageView
+            "circleImageView"     : "de.hdodenhof:circleimageview:${versions.circleimview}",
+
+            //Permission
+//            "permission"          : "com.github.hotchemi:permissionsdispatcher:${versions.permission}",
+//            "permission_compiler" : "com.github.hotchemi:permissionsdispatcher-processor:${versions.permission}",
+            "easypermission"      : "pub.devrel:easypermissions:${versions.easy_permission}",
+
+            //Anko
+            "anko_common"         : "org.jetbrains.anko:anko-commons:${versions.anko}",
+
+            //Android Image cropper
+            "android_img_cropper" : "com.theartofdev.edmodo:android-image-cropper:${versions.img_cropper}",
+
+            //Epoxy
+            "epoxy"               : "com.airbnb.android:epoxy:${versions.epoxy}",
+            "epoxy_paging"        : "com.airbnb.android:epoxy-paging:${versions.epoxy}",
+            "epoxy_compiler"      : "com.airbnb.android:epoxy-processor:${versions.epoxy}",
+            "epoxy_databinding" : "com.airbnb.android:epoxy-databinding:${versions.epoxy}" ,
+
+            //Gson
+            "gson"                : "com.google.code.gson:gson:${versions.gson}",
+
+            //Coroutines
+            "coroutines_core"     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutine}",
+            "coroutines_android"  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutine}",
+
+            "multislider"         : "io.apptik.widget:multislider:${versions.multislider}",
+
+            //Timber Logging
+            "timber"              : "com.jakewharton.timber:timber:${versions.timber}",
+
+            //Dagger
+            'dagger'              : "com.google.dagger:dagger:${versions.dagger}",
+            'dagger_compiler'     : "com.google.dagger:dagger-compiler:${versions.dagger}",
+            'dagger_processor'    : "com.google.dagger:dagger-android-processor:${versions.dagger}",
+            'dagger_support'      : "com.google.dagger:dagger-android-support:${versions.dagger}",
+
+            //Firebase
+            "firebase_core"       : "com.google.firebase:firebase-core:${versions.firebase}",
+            "firebase_messaging"  : "com.google.firebase:firebase-messaging:${versions.firebase_messaging}",
+            "crashlytics"         : "com.google.firebase:firebase-crashlytics:${versions.crashlytics}",
+            "analytics"           : "com.google.firebase:firebase-analytics:${versions.analytics}",
+
+            //OkHttp Logging
+            "okHttp_logging"      : "com.squareup.okhttp3:logging-interceptor:${versions.okHttp_logging}",
+
+
+            "crashActivity"       : "cat.ereza:customactivityoncrash:${versions.crashActivity}"
+    ]
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.3'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.20'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath deps.apollo_gradle_plugin
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.20.0"
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://maven.google.com" }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

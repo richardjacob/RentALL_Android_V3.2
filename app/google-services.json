@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "187209030519",
+    "firebase_url": "https://rentall-mobile.firebaseio.com",
+    "project_id": "rentall-mobile",
+    "storage_bucket": "rentall-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187209030519:android:d5a4834ac616eacd",
+        "android_client_info": {
+          "package_name": "com.rentall.radicalstart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187209030519-qd2s0nrrk7po8t4llvnt44j394nd3djf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rentall.radicalstart",
+            "certificate_hash": "811260e72b4ef8919ea27d8c18aa200139d7cdc2"
+          }
+        },
+        {
+          "client_id": "187209030519-5av1ssga6outfmmh9ptqgkqjufpa1qat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpEnHyy4oWwigY-mSQ_beReQ5z1D2B53M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187209030519-4480g8pd5ufuipvnkolrobcveceo6c43.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "187209030519-t7g9o63oqtkc1eht0q4h463fnuh3qatt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rs.RentALL"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

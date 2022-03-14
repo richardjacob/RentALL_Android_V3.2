@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.base.BaseViewModel"/>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/toolbar_profile"
+            style="@style/Toolbar"/>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rl_userProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/action_bar">
+        </com.airbnb.epoxy.EpoxyRecyclerView>
+
+        <FrameLayout
+            android:id="@+id/fl_userprofile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/action_bar">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_auth_loading_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            goneUnless="@{viewModel.isLoading}"
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lt_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                app:lottie_scale="0.4"
+                android:layout_gravity="center_vertical|center_horizontal"
+                app:lottie_rawRes="@raw/loading_qwe"
+                android:background="@drawable/lottie_background"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>

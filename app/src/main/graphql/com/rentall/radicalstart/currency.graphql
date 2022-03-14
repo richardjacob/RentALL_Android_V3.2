@@ -1,0 +1,40 @@
+#Default price in filter
+query priceSettings {
+  getSearchSettings {
+    results {
+      id
+      minPrice
+      maxPrice
+      priceRangeCurrency
+    }
+    status
+    errorMessage
+  }
+}
+
+# Currency List
+query getCurrenciesList {
+  getCurrencies {
+    results {
+      id
+      symbol
+      isEnable
+      isPayment
+      isBaseCurrency
+    }
+    status
+    errorMessage
+  }
+}
+
+# Currency Rate
+query getCurrency {
+  Currency {
+   base
+   rates
+   status
+   errorMessage
+  }
+}
+
+

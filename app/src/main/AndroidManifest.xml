@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rentall.radicalstart">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".RentALLApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:targetApi="m">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.entry.EntryActivity"
+            android:screenOrientation="portrait">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/password/verification"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/password/verification"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/room"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/room"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/message"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/message"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/user/verification"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/user/verification"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/review/write"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/review/write"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/password/verification"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/password/verification"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/room"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/room"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/user/verification"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/user/verification"
+                    android:scheme="https" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/review/write"
+                    android:scheme="http" />
+                <data
+                    android:host="your_site_url"
+                    android:pathPrefix="/review/write"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yongbeom.aircalendar.AirCalendarDatePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme" />
+        <activity
+            android:name=".ui.profile.review.ReviewActivity"
+            android:parentActivityName=".ui.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".ui.AuthTokenExpireActivity"
+            android:theme="@style/TransparentBase" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="cat.ereza.customactivityoncrash.RESTART" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.host.step_two.StepTwoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.host.step_three.StepThreeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.auth.AuthActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.profile.edit_profile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.profile.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.profile.feedback.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.listing.ListingDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.listing.share.ShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme" />
+        <activity
+            android:name=".ui.booking.BookingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.reservation.ReservationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.cancellation.CancellationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.inbox.msg_detail.InboxMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.inbox.msg_detail.NewInboxMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.host.hostInbox.host_msg_detail.HostNewInboxMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.saved.createlist.CreateListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.host.step_one.StepOneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.host.HostFinalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.host.hostHome.HostHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.host.hostInbox.host_msg_detail.HostInboxMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.payment.PaymentTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.profile.trustAndVerify.TrustAndVerifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.profile.confirmPhonenumber.ConfirmPhnoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.profile.about.AboutActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/InDetailTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.profile.about.why_Host.WhyHostActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.user_profile.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GOOGLE_MAP_KEY" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="@string/fb_login_protocol_scheme"
+                    tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ui.host.step_two.SingleUploadBroadcastReceiver"
+            android:exported="false" />
+
+        <activity
+            android:name=".host.payout.editpayout.EditPayoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".host.payout.addPayout.AddPayoutActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".host.payout.addPayout.StripeWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <receiver
+            android:name=".util.UploadService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.rentall.radicalstart.uploadservice.broadcast.status" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".host.photoUpload.UploadPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme">
+
+        </activity>
+        <activity
+            android:name=".ui.WebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".firebase.NotificationIntentService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

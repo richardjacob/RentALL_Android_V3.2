@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="status_bar_color">#008489</color>
+    <color name="light_grey">#EBEBEB</color>
+    <color name="colorMonthDayLabelPaint">#424242</color>
+    <color name="normal_day">@color/black</color>
+    <color name="colorWeekDayLineColor">#d8d8d8</color>
+    <color name="colorTest">#1abc9c</color>
+    <color name="colorMonthTextColor">#252525</color>
+    <color name="color_old_day_text_color">#bbbbbb</color>
+
+
+    <color name="selected_day_background">@color/status_bar_color</color>
+    <color name="selected_day_interval_text">@color/white</color>
+    <color name="selected_day_text">@color/white</color>
+    <color name="colorWeekEndColor">@color/black</color>
+
+
+
+
+</resources>

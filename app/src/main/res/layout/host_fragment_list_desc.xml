@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/desc_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            layout="@layout/toolbar"/>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rv_list_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/desc_toolbar"
+            android:layout_above="@id/view"
+            android:padding="10dp"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_above="@id/tv_next"
+            android:background="@color/edittext_line" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:drawablePadding="5dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/linetocircular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/next"
+            android:background="@drawable/curve_button_green"
+            android:drawableEnd="@drawable/ic_next_arrow"
+            style="@style/AuthScreenLottieLayout"
+            android:textDirection="locale"
+            />
+
+    </RelativeLayout>
+
+</layout>

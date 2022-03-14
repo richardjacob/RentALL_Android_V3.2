@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <plurals name="bed_count">
+        <item quantity="other"> letti</item>
+        <item quantity="one"> letto</item>
+    </plurals>
+    <plurals name="bedroom_count">
+        <item quantity="other"> camere da letto</item>
+        <item quantity="one"> Camera da letto</item>
+    </plurals>
+    <plurals name="guest_count">
+        <item quantity="other"> ospiti</item>
+        <item quantity="one"> ospite</item>
+    </plurals>
+
+    <plurals name="guest_singlular">
+        <item quantity="other"> ospiti</item>
+        <item quantity="one"> ospite</item>
+    </plurals>
+    <plurals name="bath_count">
+        <item quantity="other"> bagni privati</item>
+        <item quantity="one"> bagno privato</item>
+    </plurals>
+    <plurals name="review_count">
+        <item quantity="other"> Recensioni</item>
+        <item quantity="one"> Revisione</item>
+    </plurals>
+    <plurals name="night_count">
+        <item quantity="other"> notti</item>
+        <item quantity="one"> Notte</item>
+    </plurals>
+    <plurals name="review_count_profile">
+        <item quantity="other">%1$d Recensioni</item>
+        <item quantity="one">%1$d Revisione</item>
+    </plurals>
+    <plurals name="day_count">
+        <item quantity="other"> giorni</item>
+        <item quantity="one"> giorno</item>
+    </plurals>
+    <plurals name="home_count" tools:ignore="MissingDefaultResource">
+        <item quantity="other">Le case</item>
+        <item quantity="one"> Casa</item>
+    </plurals>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.base.BaseViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/iv_close"
+                layout="@layout/include_toolbar_listing_sub_screen" />
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rl_frag_review"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rel_submit"
+                android:layout_below="@+id/iv_close"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rel_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/curve_button_accent" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_auth_loading_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            goneUnless="@{viewModel.isLoading}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lt_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                app:lottie_rawRes="@raw/loading_qwe"
+                app:lottie_scale="0.4"
+                android:background="@drawable/lottie_background"
+                />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="text"
+            type="String"/>
+        <variable
+            name="isChecked"
+            type="Boolean"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/cl_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:soundEffectsEnabled="false"
+        android:onClick="@{onClick}"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toggle">
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{text}"
+                android:textSize="18sp"
+                android:textColor="@color/text_color"
+                android:textDirection="locale"
+                />
+        </RelativeLayout>
+
+        <ToggleButton
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/check_toggle"
+            android:background="@null"
+            android:textOn="@null"
+            android:textOff="@null"
+            android:text="@null"
+            android:textSize="0sp"
+            android:checked="@{isChecked}"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_alignParentEnd="true"
+            android:soundEffectsEnabled="false"
+            android:duplicateParentState="true"
+            android:clickable="false" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="hint"
+            type="String" />
+
+        <variable
+            name="maxLength"
+            type="Integer" />
+
+        <variable
+            name="title"
+            type="String"/>
+
+        <variable
+            name="inputType"
+            type="String"/>
+
+        <variable
+            name="paddingBottom"
+            type="Boolean"/>
+
+        <variable
+            name="text"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingBottom="@{paddingBottom? @dimen/paddingListing : @dimen/no_padding}"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:id="@+id/tv_host_hint"
+            style="@style/BecomeHostText"
+            android:text="@{title}"
+            android:textDirection="locale"
+            />
+
+        <EditText
+            android:id="@+id/et_host_edit"
+            style="@style/BecomeHostEdit"
+            android:layout_below="@id/tv_host_hint"
+            android:scrollbarStyle="insideOverlay"
+            android:hint="@{hint}"
+            android:paddingBottom="10dp"
+            android:maxLength="10"
+            android:text="@={text}"
+            android:inputType="numberDecimal"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            tools:ignore="Autofill"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"/>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.rentall.radicalstart.host.photoUpload.Step2ViewModel.NextScreen"/>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.host.photoUpload.Step2ViewModel"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="visiblity"
+            type="Boolean"/>
+        <variable
+            name="text"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+    </data>
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="locale">
+
+    <include
+        android:id="@+id/upload_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        layout="@layout/toolbar"/>
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rv_list_photos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:visibility="@{visiblity ? View.VISIBLE : View.GONE}"
+        android:layout_above="@id/view"
+        android:layout_below="@id/upload_toolbar"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_above="@id/tv_next"
+        android:background="@color/edittext_line" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/linetocircular"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        style="@style/AuthScreenLottieLayout"
+        android:layout_alignParentBottom="true"
+        android:textDirection="locale"
+        />
+
+    <FrameLayout
+        android:id="@+id/fl_stepTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_auth_loading_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40000000"
+        goneUnless="@{viewModel.isLoading}">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lt_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_scale="0.4"
+            android:layout_gravity="center_vertical|center_horizontal"
+            app:lottie_rawRes="@raw/loading_qwe"
+            android:background="@drawable/lottie_background"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>
+
+</layout>

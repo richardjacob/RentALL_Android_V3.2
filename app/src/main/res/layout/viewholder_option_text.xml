@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="desc"
+            type="String" />
+        <variable
+            name="size"
+            type="Float" />
+        <variable
+            name="paddingBottom"
+            type="Boolean" />
+        <variable
+            name="paddingTop"
+            type="Boolean" />
+        <variable
+            name="isSelected"
+            type="Boolean"/>
+        <variable
+            name="txtColor"
+            type="Boolean"/>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@{isSelected ? @drawable/gradient_bg_1 : null }"
+        android:paddingTop="@{paddingTop ? @dimen/paddingListing : @dimen/no_padding}"
+        android:paddingBottom="@{paddingBottom ? @dimen/paddingListing : @dimen/no_padding}"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{desc}"
+            textSize="@{size}"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:visibility="visible"
+            txtColor="@{txtColor}"
+            android:onClick="@{clickListener}"
+            android:textDirection="locale"
+            />
+
+    </LinearLayout>
+</layout>

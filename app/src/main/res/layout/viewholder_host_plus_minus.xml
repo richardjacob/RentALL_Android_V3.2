@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="text"
+            type="String"/>
+        <variable
+            name="minusLimit1"
+            type="Integer"/>
+        <variable
+            name="plusLimit1"
+            type="Integer"/>
+        <variable
+            name="clickMinus"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="clickPlus"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="personCapacity1"
+            type="String"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:id="@+id/tv_guest_placeholder_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@+id/ib_guest_minus"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color"
+            android:text="@{text}"
+            android:textSize="20sp"
+            android:textDirection="locale"/>
+
+        <ImageButton
+            android:id="@+id/ib_guest_minus"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_minus"
+            bathroomCount="@{personCapacity1}"
+            minusLimit="@{minusLimit1}"
+            android:onClick="@{clickMinus}"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/tv_guest_count"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_guest_count"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_toStartOf="@id/ib_guest_plus"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_color"
+            android:text="@={personCapacity1}"
+            android:textSize="18sp"
+            android:padding="0dp"
+            android:maxLength="3"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textDirection="locale"/>
+
+        <ImageButton
+            android:id="@+id/ib_guest_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_circle_plus"
+            bathroomCount="@{personCapacity1}"
+            plusLimit="@{plusLimit1}"
+            android:onClick="@{clickPlus}"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+</layout>

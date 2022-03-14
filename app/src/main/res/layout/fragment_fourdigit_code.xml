@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.rentall.radicalstart.ui.auth.AuthViewModel.Screen"/>
+        <import type="com.rentall.radicalstart.ui.profile.confirmPhonenumber.ConfirmPhnoViewModel.PHScreen"/>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.profile.confirmPhonenumber.ConfirmPhnoViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/iv_close"
+            layout="@layout/viewholder_toolbar" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_next"
+            android:layout_below="@id/iv_close"
+            android:scrollbarThumbVertical="@null"
+            android:windowSoftInputMode="adjustResize">
+
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/tv_entercode_title"
+                    style="@style/AuthScreenTitle"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/enter_four_digit"
+                    android:textColor="@color/black"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_enter_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_entercode_title"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/code_sent"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_placeholder_phone"
+                    style="@style/AuthScreenInputPlaceholder"
+                    android:layout_below="@id/tv_enter_code"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/digit_code"
+                    android:textColor="@color/text_color"
+                    android:textDirection="locale"/>
+
+
+                <EditText
+                    android:id="@+id/et_verification_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_placeholder_phone"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:paddingStart="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="@={viewModel.code}"
+                    android:onTextChanged="@{(text, start, before, count) -> viewModel.onCodeTextChanged()}"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"/>
+
+
+                <View
+                    android:id="@+id/view_et_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/et_verification_number"
+                    android:layout_marginTop="5dp"
+                    android:background="#d9d9d9" />
+
+                <TextView
+                    android:id="@+id/tv_send_again"
+                    style="@style/EditProfileScreenPlaceHolderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/view_et_divider"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/ripple_effect"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/send_again"
+                    android:onClick="@{() -> viewModel.sendCodeAgain()}"
+                    android:textColor="@color/status_bar_color"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/tv_change_number"
+                    style="@style/EditProfileScreenPlaceHolderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/tv_send_again"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/ripple_effect"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/change_number"
+                    android:onClick="@{() -> viewModel.onClick(PHScreen.CONFIRMPHONE)}"
+                    android:textColor="@color/status_bar_color"
+                    android:textDirection="locale"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/curve_button_green"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:onClick="@{() -> viewModel.verifyCode()}"
+                goneUnlessInverse="@{viewModel.isNext}"
+                app:first="@{viewModel.code}"
+                app:screen="@{Screen.CODE}"
+                android:textDirection="locale"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lt_loading_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/curve_button_green"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:hideNext="@{viewModel.lottieProgress}"
+                goneUnless="@{viewModel.isNext}"
+                app:lottie_loop="true"
+                app:lottie_scale="1.0" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
+

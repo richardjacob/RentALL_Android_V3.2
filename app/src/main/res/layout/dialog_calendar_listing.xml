@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="title"
+            type="String"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:cardBackgroundColor="#F5F6F5"
+            app:cardCornerRadius="4dp"
+            app:contentPaddingTop="15dp"
+            app:contentPaddingRight="20dp"
+            app:contentPaddingLeft="20dp"
+            app:contentPaddingBottom="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{title}"
+                    android:visibility="gone"
+                    android:textSize="20sp"
+                    android:textDirection="locale"/>
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_clear_black_24dp"/>
+
+                <com.airbnb.epoxy.EpoxyRecyclerView
+                    android:id="@+id/rv_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:layout_below="@id/iv_close"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lt_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_centerInParent="true"
+                    app:lottie_loop="true"
+                    app:lottie_scale="0.4"
+                    app:lottie_rawRes="@raw/loading_qwe"
+                    android:background="@drawable/lottie_background"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

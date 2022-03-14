@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="msg"
+            type="String" />
+        <variable
+            name="observableText"
+            type="androidx.databinding.ObservableField&lt;String&gt;"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="0dp"
+        android:layoutDirection="locale">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@={observableText}"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:onClick="@{onClick}"
+            android:textColorHint="@color/search_text_color"
+            android:backgroundTint="@color/search_text_color"
+            android:colorControlActivated="@color/black"
+            android:colorControlHighlight="@color/black"
+            android:textCursorDrawable="@drawable/cursor_black"
+            android:hint="@{msg}"
+            android:textDirection="locale"
+            android:textAlignment="viewStart"/>
+
+    </LinearLayout>
+
+</layout>

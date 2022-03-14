@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="text"
+            type="String"/>
+        <variable
+            name="image"
+            type="Integer"/>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_border"
+    android:layout_margin="20dp"
+    android:layout_marginBottom="20dp"
+    android:onClick="@{onClick}"
+    android:padding="20dp"
+    android:layoutDirection="locale">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/text_size_h2"
+        android:textColor="@color/text_color"
+        android:text="@{text}"
+        android:textDirection="locale"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"
+        drawableImage="@{image}"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>
+</layout>

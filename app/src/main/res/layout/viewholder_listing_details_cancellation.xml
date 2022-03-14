@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <data>
+        <variable
+            name="color"
+            type="Integer"/>
+        <variable
+            name="content"
+            type="String"/>
+        <variable
+            name="day"
+            type="String"/>
+        <variable
+            name="date"
+            type="String"/>
+    </data>
+
+<!--    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/kk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/kkk"
+            android:padding="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:padding="20dp"
+                android:text="@string/flexible_red"
+                android:textDirection="locale"/>
+
+            <TextView
+                android:id="@+id/jii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="20dp"
+                android:text="Thu, Jun 08 3:00 PM"
+                android:textDirection="locale"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/jii1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_alignBottom="@id/kk"
+            android:layout_marginBottom="20dp"
+            android:text=" 1 Day Prior"
+            android:textDirection="locale"/>
+
+        <FrameLayout
+            android:id="@+id/kkk"
+            android:layout_toEndOf="@id/jii1"
+            android:layout_alignBottom="@id/kk"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/status_bar_color">
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/status_bar_color"/>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/shape_circle"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:id="@+id/jii1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:ems="5"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@{day}"
+            android:textDirection="locale"/>
+
+        <RelativeLayout
+            android:id="@+id/kkk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/jii1"
+            color="@{color}">
+
+            <RelativeLayout
+                android:id="@+id/ij"
+                android:layout_width="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    color="@{color}"/>
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_circle"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/kk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ij"
+                android:padding="0dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    android:padding="20dp"
+                    android:text="@{content}"
+                    android:textDirection="locale"/>
+
+                <TextView
+                    android:id="@+id/jii"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:layout_margin="20dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@{date}"
+                    android:textDirection="locale"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rentall.radicalstart.ui.host.step_one.StepOneViewModel" />
+        <variable
+            name="onNextClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/rl_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:splitMotionEvents="false"
+        android:layoutDirection="locale">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/toolbar"
+            style="@style/Toolbar"/>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/rv_step_one"
+            android:layout_margin="10dp"
+            android:paddingBottom="70dp"
+            android:layout_below="@id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.airbnb.epoxy.EpoxyRecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/curve_button_green"
+            android:layout_gravity="bottom"
+            android:layout_margin="30dp">
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:drawableEnd="@drawable/ic_next_arrow"
+                android:textStyle="bold"
+                goneUnlessInverse="@{viewModel.isNext}"
+                checkInternet="@{viewModel}"
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lt_loading_view"
+                android:layout_width="90dp"
+                android:layout_height="45dp"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                app:hideNextButton="@{viewModel.lottieProgress}"
+                goneUnless="@{viewModel.isNext}"
+                app:lottie_loop="true"
+                app:lottie_scale="1.0" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

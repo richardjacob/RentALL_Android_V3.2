@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <plurals name="bed_count">
+        <item quantity="other"> camas</item>
+        <item quantity="one"> cama</item>
+    </plurals>
+    <plurals name="bedroom_count">
+        <item quantity="other"> dormitorios</item>
+        <item quantity="one"> habitación</item>
+    </plurals>
+    <plurals name="guest_count">
+        <item quantity="other"> invitados</item>
+        <item quantity="one"> huésped</item>
+    </plurals>
+
+    <plurals name="guest_singlular">
+        <item quantity="other"> huésped</item>
+        <item quantity="one"> huésped</item>
+    </plurals>
+    <plurals name="bath_count">
+        <item quantity="other"> baños privados</item>
+        <item quantity="one"> baño privado</item>
+    </plurals>
+    <plurals name="review_count">
+        <item quantity="other"> Opiniones</item>
+        <item quantity="one"> revisión</item>
+    </plurals>
+    <plurals name="night_count">
+        <item quantity="other"> Noches</item>
+        <item quantity="one"> Noche</item>
+    </plurals>
+    <plurals name="review_count_profile">
+        <item quantity="other">%1$d Opiniones</item>
+        <item quantity="one">%1$d revisión</item>
+    </plurals>
+    <plurals name="day_count">
+        <item quantity="other" tools:ignore="Typos"> dias</item>
+        <item quantity="one" tools:ignore="Typos"> dia</item>
+    </plurals>
+    <plurals name="home_count" tools:ignore="MissingDefaultResource">
+        <item quantity="other"> Casas</item>
+        <item quantity="one"> Casa</item>
+    </plurals>
+</resources>

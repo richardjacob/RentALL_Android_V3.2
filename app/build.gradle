@@ -1,0 +1,145 @@
+import com.google.android.gms.*
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-parcelize'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "com.apollographql.apollo"
+
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+apollo {
+    generateKotlinModels.set(false)
+}
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.rentall.radicalstart"
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
+        versionCode 36
+        vectorDrawables.useSupportLibrary = true
+        versionName "3.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+
+        dataBinding true
+
+
+        viewBinding true
+    }
+    buildToolsVersion '28.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+kapt {
+    generateStubs = true
+    correctErrorTypes = true
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':AirCalendar')
+    implementation project(':TimeSquare')
+    implementation deps.kotlin_stdlib
+    implementation deps.app_compat_v7
+    implementation deps.support_v4
+    implementation deps.annotation
+    implementation deps.design
+    implementation deps.constraintLayout
+    implementation deps.places
+    implementation deps.maps
+    implementation deps.apollo
+    implementation deps.apollo_rx2_support
+    implementation deps.apollo_cache
+    implementation deps.lottie
+    implementation deps.glide
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt deps.glide_compiler
+    implementation deps.easypermission
+    implementation deps.android_img_cropper
+    implementation deps.circleImageView
+    implementation deps.epoxy
+    implementation deps.epoxy_paging
+    kapt deps.epoxy_compiler
+    implementation deps.viewModel_liveData
+    kapt deps.lifecycle_compiler
+    implementation deps.gson
+    implementation deps.timber
+    implementation deps.rxjava
+    implementation deps.rxandroid
+    implementation deps.dagger
+    kapt deps.dagger_compiler
+    kapt deps.dagger_processor
+    implementation deps.dagger_support
+    implementation deps.room
+    kapt deps.room_compiler
+    implementation 'com.github.gokukish:ahbottomnavigation:feature-SNAPSHOT'
+    implementation deps.google_auth
+    implementation deps.fb_login
+    implementation deps.firebase_messaging
+    implementation deps.joda_time
+    implementation deps.okHttp_logging
+    implementation 'com.stripe:stripe-android:16.10.2'
+    implementation 'net.gotev:uploadservice:3.5.2'
+    implementation deps.epoxy_databinding
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.9'
+    implementation 'com.google.maps.android:android-maps-utils:2.2.0'
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v2.0.6'
+    implementation 'com.kyleduo.switchbutton:library:2.0.3'
+    implementation deps.crashActivity
+    releaseImplementation deps.crashlytics
+    releaseImplementation deps.analytics
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+    implementation 'com.droidninja:filepicker:2.2.5'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
+    implementation('com.github.JakeWharton:ViewPagerIndicator:2.4.1') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+    implementation 'com.github.kizitonwose:CalendarView:0.3.5'
+    implementation 'com.android.volley:volley:1.1.1'
+    
+}
+
+configurations.all {
+    exclude group: 'com.android.support', module: 'support-v13'
+}
